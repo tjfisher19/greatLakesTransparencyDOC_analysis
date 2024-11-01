@@ -1,0 +1,623 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Nicole L. Berry</origin>
+        <origin>Erin P. Overholt</origin>
+        <origin>Elizabeth M. Mette</origin>
+        <origin>David B. Bunnell</origin>
+        <origin>Todd Howell</origin>
+        <origin>Ryan Lepak</origin>
+        <origin>Ralph Smith</origin>
+        <origin>Craig E. Williamson</origin>
+        <pubdate>2024</pubdate>
+        <title>Water transparency in the Laurentian Great Lakes</title>
+        <edition>version 6</edition>
+        <geoform>tabular digital data</geoform>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <othercit>[Nicole L. Berry, U. S. Geological Survey Great Lakes Science Center, 0000-0002-7889-197X], [Erin P. Overholt, Miami University, 0000-0001-9078-7086], [Elizabeth M. Mette, Miami University, 0009-0007-9622-1260], [David B. Bunnell, U.S. Geological Survey Great Lakes Science Center, 0000-0003-3521-7747], [Todd Howell, Ontario Ministry of the Environment, Conservation, and Parks, 0000-0001-6400-3495], [Ryan Lepak, U.S. EPA Office of Research and Development, Center for Computational Toxicology and Exposure, Great Lakes Ecology and Toxicology Division, 0000-0003-2806-1895], [Ralph Smith, University of Waterloo (Emeritus), NA], [Craig E. Williamson, Miami University (Emeritus), 0000-0001-7350-1912]</othercit>
+        <onlink>doi:10.6073/pasta/8f2d32efb330180c8f83af9b896559b4</onlink>
+        <onlink>https://gcc02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fportal.edirepository.org%2Fnis%2Fmapbrowse%3Fscope%3Dedi%26identifier%3D1321&amp;data=05%7C02%7Cnberry%40usgs.gov%7C8dd27f24b15144d9bfed08dcd72f555f%7C0693b5ba4b184d7b9341f32f400a5494%7C0%7C0%7C638621845489377277%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=6f0xwVSt81fFvr0EP6imQTYQD%2BIEs9H5GV6iDDbBkHA%3D&amp;reserved=0</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>The Laurentian Great Lakes in the mid-east region of North America, is one of the largest freshwater ecosystems in the world. This data set contains limnological data, focusing on underwater transparency in this ecosystem and the surrounding region, beginning in 1999. Current water transparency data sets highlight the increase in offshore transparency measured by a deepening of average Secchi Disk depth since the invasion of the Dreissenid mussels. However, limited data exists on the Great Lakes to provide insight to the underwater optical environment of the offshore, nearshore, and surrounding water bodies of these lakes. These data illustrate the vertical underwater light environment with data from wavelengths of sunlight including photosynthetically active radiation (400 – 700 nm), UV-A radiation (320 - 400 nm) and UV-B radiation (290 - 320 nm). Understanding the depths to which these specific wavelengths of sunlight reach within a lake, as well as the substances within the lake that may influence the attenuation of sunlight can provide a picture of how habitats within the lake system have been impacted. This data set is a part of a continuous data collaboration among multiple research groups, and will be updated periodically as more data are made available. As such, this initial data set provides a snapshot of water transparency in the Great Lakes, and more sampling sites and years of data are forthcoming.
+
+The data here are contained in five files, including Data_GreatLakes.csv, SiteInformation_GreatLakes.csv, Methods_GreatLakes.csv, and Variables_GreatLakes. The main data are in Data_GreatLakes.csv. SiteInformation_GreatLakes.csv, Methods_GreatLakes.csv, and Variables_GreatLakes.csv support the main data file with descriptions of the sampling sites, methods by which samples were processed, and descriptions of variables, respectively.</abstract>
+      <purpose>Water transparency data beyond measurements made with a Secchi disk depth are sparse and scattered across numerous databases related to the Great Lakes and surrounding watersheds. Our goal was to collate all existing water transparency data primarily measured with a high frequency underwater optical radiometer and to continue to collect these data across all five Great Lakes and the surrounding watersheds and place these data in one, central, and publicly available database to facilitate the use of these data across multiple agencies and geographic regions. </purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>1999</begdate>
+          <enddate>2022</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-92.7246</westbc>
+        <eastbc>-74.0918</eastbc>
+        <northbc>49.2391</northbc>
+        <southbc>41.0131</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>inlandWaters</themekey>
+        <themekey>environment</themekey>
+      </theme>
+      <theme>
+        <themekt>LTER Controlled Vocabulary</themekt>
+        <themekey>lake</themekey>
+        <themekey>limnology</themekey>
+        <themekey>freshwater</themekey>
+        <themekey>temperature</themekey>
+      </theme>
+      <theme>
+        <themekt>https://apps.usgs.gov/thesaurus/term-check.php</themekt>
+        <themekey>water quality</themekey>
+        <themekey>water properties</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>water transparency</themekey>
+        <themekey>ultraviolet radiation</themekey>
+        <themekey>UV radiation</themekey>
+      </theme>
+      <place>
+        <placekt>** REMOVE THIS ENTRY WITH "Remove Selected" button**</placekt>
+        <placekey>Use "Search Controlled Vocabularies" button to search and add terms.  </placekey>
+      </place>
+      <place>
+        <placekt>https://www.getty.edu/vow/TGNFullDisplay?find=Great+Lakes&amp;place=&amp;nation=&amp;prev_page=1&amp;english=Y&amp;subjectid=3000034</placekt>
+        <placekey>Great Lakes Region</placekey>
+      </place>
+    </keywords>
+    <accconst>There are no data access constraints. </accconst>
+    <useconst>There are no data use constraints. </useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Nicole L Berry</cntper>
+          <cntorg>USGS - MIDCONTINENT REGION</cntorg>
+        </cntperp>
+        <cntpos>Fisheries Biologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Great Lakes Science Ctr,GLSC - AA - R and D Bldg</address>
+          <city>Ann Arbor</city>
+          <state>MI</state>
+          <postal>48105</postal>
+        </cntaddr>
+        <cntvoice>734-994-3331</cntvoice>
+        <cntemail>nberry@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>This research was funded by Grant No. G21AC10726 (2021) from the U.S. Geological Survey Midwest Climate Adaptation Science Center, Grant No. FY22AP02900 from the U. S. Fish and Wildlife Great Lakes Restoration Act, Grant No. 2019.1806 from the Great Lakes Fishery Trust, Grant No. NSF DEB - 1950170 and NSF DEB - 1754276 from the National Science Foundation. Portions of the data collected was funded by NSERC Discovery Grant Program, titled "Environmental control of primary production in large lakes."</datacred>
+    <native>LoggerLight is the data aquisition software used by the instruments collecting the optical profiles.
+Microsoft Excel version Microsoft Office LTSC Professional Plus 2021
+RStudio version 2023.09.1+494 "Desert Sunflower" Release (cd7011dce393115d3a7c3db799dda4b1c7e88711, 2023-10-16)
+Packages in R: lubridate, tidyverse, dplyr, tidyr, data.table, devtools, EMLassemblyline</native>
+    <crossref>
+      <citeinfo>
+        <origin>Nicole L. Berry</origin>
+        <pubdate>2024</pubdate>
+        <title>Does ultraviolet radiation have the potential to influence the early life stages of Great Lakes fish?</title>
+        <geoform>publication</geoform>
+        <othercit>Doctoral Dissertation, Miami University</othercit>
+        <onlink>http://rave.ohiolink.edu/etdc/view?acc_num=miami171257264578826</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Ralph E.H. Smith</origin>
+        <origin>Chris D. Allen</origin>
+        <origin>Murray N. Charlton</origin>
+        <pubdate>200401</pubdate>
+        <title>Dissolved Organic Matter and Ultraviolet Radiation Penetration in the Laurentian Great Lakes and Tributary Waters</title>
+        <geoform>publication</geoform>
+        <serinfo>
+          <sername>Journal of Great Lakes Research</sername>
+          <issue>vol. 30, issue 3</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>n/a</pubplace>
+          <publish>Elsevier BV</publish>
+        </pubinfo>
+        <othercit>ppg. 367-380</othercit>
+        <onlink>https://doi.org/10.1016/S0380-1330(04)70354-8</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Ryan F. Lepak</origin>
+        <origin>Joel C. Hoffman</origin>
+        <origin>Sarah E. Janssen</origin>
+        <origin>David P. Krabbenhoft</origin>
+        <origin>Jacob M. Ogorek</origin>
+        <origin>John F. DeWild</origin>
+        <origin>Michael T. Tate</origin>
+        <origin>Christopher L. Babiarz</origin>
+        <origin>Runsheng Yin</origin>
+        <origin>Elizabeth W. Murphy</origin>
+        <origin>Daniel R. Engstrom</origin>
+        <origin>James P. Hurley</origin>
+        <pubdate>20191104</pubdate>
+        <title>Mercury source changes and food web shifts alter contamination signatures of predatory fish from Lake Michigan</title>
+        <geoform>publication</geoform>
+        <serinfo>
+          <sername>Proceedings of the National Academy of Sciences</sername>
+          <issue>vol. 116, issue 47</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>n/a</pubplace>
+          <publish>Proceedings of the National Academy of Sciences</publish>
+        </pubinfo>
+        <othercit>ppg. 23600-23608</othercit>
+        <onlink>https://doi.org/10.1073/pnas.1907484116</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Nicole L. Berry</origin>
+        <origin>David B. Bunnell</origin>
+        <origin>Thomas J. Fisher</origin>
+        <origin>Erin P. Overholt</origin>
+        <origin>Elizabeth M. Mette</origin>
+        <origin>Todd Howell</origin>
+        <origin>Craig E. Williamson</origin>
+        <pubdate>2024</pubdate>
+        <title>Decreased spatial and temporal water transparency of the nearshore Canadian waters of the Laurentian Great Lakes is driven by increased dissolved organic carbon</title>
+        <geoform>publication</geoform>
+        <othercit>This publication IP-170502 is being prepared for submission to the Canadian Journal of Fisheries and Aquatic Sciences special collection of papers regarding lake browning or darkening in freshwater ecosystems. The manuscript is due November 1st, 2024. </othercit>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>To check for data accuracy, a standardized Microsoft Excel template file called Kd-Calc (developed by underwater optical experts in the field of freshwater limnology) was used to derive summary values from the raw optical profiles that were collected. Each profile analysis was reviewed by at least two users before being approved for the database. More specific steps for obtaining and checking each variable attribute are included in the methods description. In general, data files that were incomplete, or did not have enough data points to appropriately obtain each variable of interest were omitted from the dataset. </attraccr>
+    </attracc>
+    <logic>Data obtained from each optical profile was first visually checked by plotting each depth versus time (to ensure that there was a "normal" descent and return). Erroneous plots would include a "step" sort of descent/return rather than a straight line (indicating the instrument was swinging during the data collection) or gaps of missing values (indicating that the instrument lost connection to the computer during the descent or return). Profiles that looked irregular were flagged, examined further to see if the issue impacted the quality of the data, and if it did, the profile was excluded from further analysis. For summary values obtained from the calculated slopes of regression lines, the regression lines with R-squared values greater than or equal to .80. Values that were measured values, and not calculated, could be auto-populated in the Microsoft Excel template file used to analyze the raw optical profile data, even if not measured directly. Because of this, each measured data value obtained through Kd-Calc was compared to the actual depth ranges that the instrument sampled. When those depth ranges were sampled a value of "Equal" was reported in the template and this value was used to filter the data so only measured values that were actually measured are included in this database release. </logic>
+    <complete>These data represent the majority of the high-frequency optical data spanning across all of the Great Lakes. Where large spatial or temporal gaps exist in the dataset, it is more likely due to an absence of sampling in that location or time frame, not as a result of an instrument malfunction or other phenomenon that prevented the collecting optical profiles. These data represent high-frequency optical data collected using underwater profiling instruments made by PUV - 2500 radiometers (Biospherical Instruments Inc. San Diego, CA, USA) or OCI - 200 (Satlantic Cesena, FC, Italy). These instruments provide very quality underwater measurements of sunlight, however, these are not the only tools available to quantify the underwater optical environment of the Great Lakes -- especially in regards to measuring longer wavelengths of sunlight (400 - 700 nm). We highlight other data bases related to these data in the "Provenance" and "Journal Citation" sections of the metadata summary page. </complete>
+    <posacc>
+      <horizpa>
+        <horizpar>We visually checked the latitude and longitude of the data by plotting them on a map of the Great Lakes to confirm that sites were within the correct main basin of the lake or connecting body of water. </horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>Vertical depth profiles were collected to obtain these summary values presented in this report. Two steps were taken to check for depth accuracy: 1) data were plotted depth versus time to make sure a "smooth" descent and return were observed (when the profile was not smooth it was flagged and further reviewed). 2) the "surface" of the depth (0 m) was manually corrected for by first plotting the depth versus data row number and visually searching for the data row number where the depth begins to consistently decreased (indicating the start of a descent into the lake). We asked that researchers hold the instrument just below the surface for at least 5 - 10 seconds before starting the descent to make this visual examination step clear to the data analyzer. Then, the descending depth values were compared to the measured values for the 320 or 340 nm wavelengths to confirm that the instrument was descending and not just "bouncing" in the waves. From these two steps, the surface depth range was set and then averaged values within this range of data points for each variable of interest was used further along in the Kd-Calc template calculations. As a final step to check for irregularities with the optical profiles, two more graphs were automatically creating plotting the 1% depth of each wavelength based on first percent of sunlight compared to the deck cell (which measured sunlight outside of the water and was used to correct for changes in ambient [cloud cover] sunlight conditions during the sampling period) and second percent of sunlight compared to the subsurface layer which utilizes the averaged values of each wavelength calculated from the "surface" layer measurements at the start of each sampling period (and described above). </vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>J. T. O. Kirk</origin>
+            <pubdate>1994</pubdate>
+            <title>Optics of UV-B radiation in natural waters</title>
+            <edition>second</edition>
+            <geoform>publication</geoform>
+            <othercit>Arch. Hydrogiol. Beih. Ergebn. Limnol., 43 pp. 1-16</othercit>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>1194</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Kirk 1994</srccitea>
+        <srccontr>The methods for analyzing optical data in this manuscript helped with the development of the standardized approach for analyzing optical profiles used in creating this database. </srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Donald P. Morris</origin>
+            <origin>Horatio Zagarese</origin>
+            <origin>Craig E. Williamson</origin>
+            <origin>Esteban G. Balseiro</origin>
+            <origin>Bruce R. Hargreaves</origin>
+            <origin>Beatriz Modenutti</origin>
+            <origin>Robert Moeller</origin>
+            <origin>Claudia Queimalinos</origin>
+            <pubdate>20031222</pubdate>
+            <title>The attenuation of solar UV radiation in lakes and the role of dissolved organic carbon</title>
+            <geoform>publication</geoform>
+            <serinfo>
+              <sername>Limnology and Oceanography</sername>
+              <issue>vol. 40, issue 8</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>Wiley</publish>
+            </pubinfo>
+            <othercit>ppg. 1381-1391</othercit>
+            <onlink>https://doi.org/10.4319/lo.1995.40.8.1381</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>1995</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Morris et al. 1995</srccitea>
+        <srccontr>The methods for analyzing optical data in this manuscript helped with the development of the standardized approach for analyzing optical profiles used in creating this database. </srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Craig E. Williamson</origin>
+            <origin>Richard S. Stemberger</origin>
+            <origin>Donald P. Morris</origin>
+            <origin>Thomas M. Frost</origin>
+            <origin>Steven G. Paulsen</origin>
+            <pubdate>1996</pubdate>
+            <title>Ultraviolet radiation in North American lakes: Attenuation estimates from DOC measurements and implications for plankton communities</title>
+            <geoform>publication</geoform>
+            <serinfo>
+              <sername>Limnology and Oceanography</sername>
+              <issue>vol. 41, issue 5</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>n/a</pubplace>
+              <publish>Wiley</publish>
+            </pubinfo>
+            <othercit>ppg. 1024-1034</othercit>
+            <onlink>https://doi.org/10.4319/lo.1996.41.5.1024</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>1996</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Williamson et al. 1996</srccitea>
+        <srccontr>The methods for analyzing optical data in this manuscript helped with the development of the standardized approach for analyzing optical profiles used in creating this database. </srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Step 1) Field Collection of Optical Profiles:
+
+Although individual users should consult the user manual for specific calibration methods for their instruments, the general approach for collecting these optical data was as follows:
+1) take a dark reading that can be referenced later, if needed, to monitor for sensor drift
+2) place the deck cell in an unshaded area to monitor for changes in ambient sunlight conditions
+3) begin submersing the submersible unit into the water
+3a) hold the submersible unit at the water's surface (so water is just covering the white sensor); when it is wavey, hold the sensor so it cuts the peak and trough of the waves in half; hold the instrument for 5 - 10 seconds before deploying
+3b) begin deploying the instrument, make sure rapid, high frequency, or maximum sampling rate is turned "ON" so a data point is collected about every second. slowly lower the instrument, especially in less transparent waters where the shorter wavelengths will be attenuated much faster
+3c) lower the instrument to the bottom of the habitat being sampled, or until the end of the cord is reached, add a note of the metadata for the site and return the instrument to the surface (it is suggested to continue recording on the return to essentially have two replicate profiles)
+4) when the instrument has surfaced, record the note and end profiling
+5) corresponding optical profiles and relevant metadata were shared with Miami University's team for further review and analysis.</procdesc>
+        <procdate>1999</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Step 2) Optical Profile Processing in Kd-Calc:
+
+Individual methods used for each variable are described, in detail, within the Methods_GreatLakes table, which is tied to the Data_GreatLakes table by the MethodID column. 
+Briefly, optical profiles (as .csv files) were shared with Miami University and USGS GLSC researchers for further analysis using a standardized Microsoft Excel template file called Kd-Calc. Kd-Calc was originally developed by Bruce Hargreaves based on the methods for analyzing optical profiles described by Kirk (1994), Morris et al. (1995), and Williamson et al. (1996). The template accurately estimates the light attentuation coefficients (Kd), the measured and estimated 1% and 10% depths of every wavelength measured by the instrument, and the temperature at 0.5 and 2.0 m deep (when appropriate). The template goes through a series of steps and utilizes the deck cell readings, which correct for changes in ambient sunlight conditions during the profile. Each profile is checked for quality (visually) and each profile must have enough data points collected within the photic layer of the lake accurately estimate an averaged Kd value form the slope of the linear regression of the natural log-transformed downwelling irradiance values versus depth (Morris et al. 1995). Optical profiles where there were not enough data points to accurately estimate each variable of interest were flagged and excluded from further analysis. Each Kd-Calc file that was produced from analyzing an optical profile was saved and archived internally for later reference, if needed. Only summary values are provided in the database for user accessibility, however, access to the Kd-Calc files can be obtained by contacting Nicole Berry at nberry@usgs.gov. </procdesc>
+        <srcused>Kirk 1994</srcused>
+        <srcused>Morris et al. 1995</srcused>
+        <srcused>Williamson et al. 1996</srcused>
+        <procdate>2020</procdate>
+        <proccont>
+          <cntinfo>
+            <cntperp>
+              <cntper>Nicole L Berry</cntper>
+              <cntorg>USGS - MIDCONTINENT REGION</cntorg>
+            </cntperp>
+            <cntpos>Fisheries Biologist</cntpos>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>Great Lakes Science Ctr,GLSC - AA - R and D Bldg</address>
+              <city>Ann Arbor</city>
+              <state>MI</state>
+              <postal>48105</postal>
+            </cntaddr>
+            <cntvoice>734-994-3331</cntvoice>
+            <cntemail>nberry@usgs.gov</cntemail>
+          </cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Data_GreatLakes.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>SiteID</attrlabl>
+        <attrdef>A unique identifier was created for each new unique site that was sampled in the Great Lakes. Sites were determined "unique" based on individual collaborators study design parameters (typically determined by distance from shore, bottom depth of a certain portion of the habitat within the lake, or relationship to a specific port/harbor within a lake). This SiteID column can be paired with the SiteID column in the SiteInformation_GreatLakes.csv file to learn more about every individual data point. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Unique identifying codes used to pair individual data points with relevant site information for where the samples were collected. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site</attrlabl>
+        <attrdef>The informal name of the site where the sample was collected from. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Site names are generally named as the main basin of the lake separated by an underscore and then the secondary piece of information is provided by the collaborator and informed by some combination of the closest port and relevant information of the associated sampling design. For example, Huron_MarquetteIslandOSSmith66 is a site that is within Lake Huron, is closest to Marquette Islands and was collected as part of Smith et al. 2004 surveying efforts labeled as site number 66 within that study design. The naming schematics used here are most useful for collaborators that helped collect, or worked with agencies that collected these data. The most accurate site description is the latitude and longitude which can be found by pairing the SiteID and Site columns in the Data_GreatLakes.csv file with the SiteInformation.csv file. This column can also be used as a quick filter to select for sites only related to the one of the five Great Lakes, or the surrounding watersheds. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>The date that the optical profiles were collected.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Dates are written as YYYY-MM-DD HH:MM .</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>Depth</attrlabl><attrdef>The depth that the sample was collected at within the lake. This column is most informative for the temperature measurements at 0.5 and 2.0 meters deep. </attrdef><attrdefs>Producer Defined</attrdefs><attrdomv><edom><edomv>NAN</edomv><edomvd>A sampling depth is not relevant to the corresponding data value. </edomvd><edomvds>Producer defined</edomvds></edom></attrdomv><attrdomv>
+    <edom>
+      <edomv>NAN</edomv>
+      <edomvd>A sampling depth is not relevant to the corresponding data value.</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>0.5</edomv>
+      <edomvd>0.5 meters deep</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>2</edomv>
+      <edomvd>2.0 meters deep</edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+        <attrlabl>Variable</attrlabl>
+        <attrdef>This column defines the variable that the corresponding value (in the same row) is representing. This column corresponds with the Variable column in the Variable_GreatLakes.csv file, where more detailed descriptions of how each variable was calculated or measured, and the corresponding units are provided. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Unique identification values used to provide more detailed descriptions of the values provided for each variable in the Data_GreatLakes.csv file. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>These are the values of each variable measured. The Variable column and Variable_GreatLakes.csv file should be kept with these values in order to know the units, and measurement resolution of the data. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.03</rdommin>
+            <rdommax>32.08</rdommax>
+            <attrunit>See Variable and Variable_GreatLakes.csv file</attrunit>
+            <attrmres>See Variable and Varible_GreatLakes.csv file</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MethodID</attrlabl>
+        <attrdef>MethodID provides unique ID's to define each individual data point's method of collection in the field. This column is also present in the Methods_GreatLakes.csv file and is used to pair these two sets of information together. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Check the Method_GreatLakes.csv file and pair the MethodID columns for more information of the specific instruments and methods used to collect these data in the field. </udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Methods_GreatLakes.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing the method description for how the data was collected.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>MethodID</attrlabl>
+        <attrdef>MethodID provides unique ID's to define each individual data point's method of collection in the field. This column is also present in the Data_GreatLakes.csv file and is used to pair these two sets of information together. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>The unique ID's that correspond with the MethodID column found in the Data_GreatLakes.csv file and defined here in the MethodDetails column. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MethodDetails</attrlabl>
+        <attrdef>Definitions for each unique MethodID that is used to indicate which instrument and method was used to collect the optical profiles in the field. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>The details for the field collection of these data.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>SiteInformation_GreatLakes.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing information regarding the sites where data was collected in the Data_GreatLakes.csv file. </enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>SiteID</attrlabl>
+        <attrdef>A unique identifier was created for each new unique site that was sampled in the Great Lakes. Sites were determined "unique" based on individual collaborators study design parameters (typically determined by distance from shore, bottom depth of a certain portion of the habitat within the lake, or relationship to a specific port/harbor within a lake). This SiteID column can be paired with the SiteID column in the Data_GreatLakes.csv file to learn more about every individual data point. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Unique identifying codes used to pair individual data points with relevant site information for where the samples were collected. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site</attrlabl>
+        <attrdef>The informal name of the site where the sample was collected from. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Site names are generally named as the main basin of the lake separated by an underscore and then the secondary piece of information is provided by the collaborator and informed by some combination of the closest port and relevant information of the associated sampling design. For example, Huron_MarquetteIslandOSSmith66 is a site that is within Lake Huron, is closest to Marquette Islands and was collected as part of Smith et al. 2004 surveying efforts labeled as site number 66 within that study design. The naming schematics used here are most useful for collaborators that helped collect, or worked with agencies that collected these data. The most accurate site description is the latitude and longitude which can be found by pairing the SiteID and Site columns in the Data_GreatLakes.csv file with the SiteInformation.csv file. This column can also be used as a quick filter to select for sites only related to the one of the five Great Lakes, or the surrounding watersheds. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+  <attrlabl>LakeName</attrlabl><attrdef>The name of the water body where the optical profile was collected. Lake names are generally one of the five Great Lakes, unless a sample was collected from a connecting tributary, drowned river mouth lake, or similar habitat that connects to one of the main basins of the Great Lakes. This column can be used as a quick filter of the data. </attrdef><attrdefs>Producer Defined</attrdefs><attrdomv>
+    <edom>
+      <edomv>Ontario</edomv>
+      <edomvd>
+      </edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Huron</edomv>
+      <edomvd>
+      </edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Erie</edomv>
+      <edomvd>
+      </edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Superior</edomv>
+      <edomvd>
+      </edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+  <attrdomv>
+    <edom>
+      <edomv>Michigan</edomv>
+      <edomvd>
+      </edomvd>
+      <edomvds>Producer defined</edomvds>
+    </edom>
+  </attrdomv>
+</attr>
+      <attr>
+        <attrlabl>Latitude</attrlabl>
+        <attrdef>The latitude of the sites where optical profiles were collected. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>41.85681</rdommin>
+            <rdommax>48.93062</rdommax>
+            <attrunit>decimal degrees</attrunit>
+            <attrmres>five significant figures</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Longitude</attrlabl>
+        <attrdef>The longitude of the sites where optical profiles were collected. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-89.47153</rdommin>
+            <rdommax>-74.41608</rdommax>
+            <attrunit>decimal degrees</attrunit>
+            <attrmres>five significant figures</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Variables_GreatLakes.csv</enttypl>
+        <enttypd>Comma Separated Value (CSV) file containing the variable definitions and units for each value in the Data_GreatLakes.csv file.</enttypd>
+        <enttypds>Producer Defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Variable</attrlabl>
+        <attrdef>This column defines the variable that the corresponding value (in the same row of the Data_GreatLakes.csv file) is representing. In this file more detailed descriptions of how each variable was calculated or measured (Definition column), and the corresponding units (Unit column) are provided. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Unique identification values used to provide more detailed descriptions of the values provided for each variable in the Data_GreatLakes.csv file. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Unit</attrlabl>
+        <attrdef>Units for each variable that was measured or calculated. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Units for each variable that was measured or calculated. </udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Definition</attrlabl>
+        <attrdef>More detailed descriptions for how each variable was measured or calculated is provided. </attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>More detailed descriptions for how each variable was measured or calculated and the resolution of those measurements and calculations is provided. </udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>Nicole L Berry</cntper>
+          <cntorg>USGS - MIDCONTINENT REGION</cntorg>
+        </cntperp>
+        <cntpos>Fisheries Biologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Great Lakes Science Ctr,GLSC - AA - R and D Bldg</address>
+          <city>Ann Arbor</city>
+          <state>MI</state>
+          <postal>48105</postal>
+        </cntaddr>
+        <cntvoice>734-994-3331</cntvoice>
+        <cntemail>nberry@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform><digtinfo>
+          <formname>Digital Data</formname>
+        </digtinfo>
+        <digtopt><onlinopt><computer><networka><networkr>https://gcc02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fportal.edirepository.org%2Fnis%2Fmapbrowse%3Fscope%3Dedi%26identifier%3D1321&amp;data=05%7C02%7Cnberry%40usgs.gov%7C8dd27f24b15144d9bfed08dcd72f555f%7C0693b5ba4b184d7b9341f32f400a5494%7C0%7C0%7C638621845489377277%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=6f0xwVSt81fFvr0EP6imQTYQD%2BIEs9H5GV6iDDbBkHA%3D&amp;reserved=0</networkr></networka></computer></onlinopt></digtopt></digform>
+      <fees>There are no fees associated with these data. </fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>2024</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Nicole L Berry</cntper>
+          <cntorg>USGS - MIDCONTINENT REGION</cntorg>
+        </cntperp>
+        <cntpos>Fisheries Biologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Great Lakes Science Ctr,GLSC - AA - R and D Bldg</address>
+          <city>Ann Arbor</city>
+          <state>MI</state>
+          <postal>48105</postal>
+        </cntaddr>
+        <cntvoice>734-994-3331</cntvoice>
+        <cntemail>nberry@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

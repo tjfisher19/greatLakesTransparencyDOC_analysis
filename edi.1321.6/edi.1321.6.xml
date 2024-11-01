@@ -1,0 +1,2715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+         xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         packageId="edi.1321.6"
+         system="https://pasta.edirepository.org"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+   <access authSystem="https://pasta.edirepository.org/authentication"
+           order="allowFirst"
+           scope="document"
+           system="https://pasta.edirepository.org">
+      <allow>
+         <principal>uid=EDI,o=EDI,dc=edirepository,dc=org</principal>
+         <permission>all</permission>
+      </allow>
+      <allow>
+         <principal>uid=globalchangelimno,o=EDI,dc=edirepository,dc=org</principal>
+         <permission>all</permission>
+      </allow>
+      <allow>
+         <principal>uid=usgs_reviewer,o=EDI,dc=edirepository,dc=org</principal>
+         <permission>all</permission>
+      </allow>
+   </access>
+   <dataset>
+      <title>Water transparency in the Laurentian Great Lakes</title>
+      <creator>
+         <individualName>
+            <givenName>Nicole</givenName>
+            <givenName>L</givenName>
+            <surName>Berry</surName>
+         </individualName>
+         <organizationName>U.S. Geological Survey Great Lakes Science Center</organizationName>
+         <electronicMailAddress>nberry@usgs.gov</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0002-7889-197X</userId>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Erin</givenName>
+            <givenName>P</givenName>
+            <surName>Overholt</surName>
+         </individualName>
+         <organizationName>Miami University</organizationName>
+         <electronicMailAddress>overhoep@miamioh.edu</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0001-9078-7086</userId>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Elizabeth</givenName>
+            <givenName>M</givenName>
+            <surName>Mette</surName>
+         </individualName>
+         <organizationName>Miami University</organizationName>
+         <electronicMailAddress>dickmaem@miamioh.edu</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0009-0007-9622-1260</userId>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>David</givenName>
+            <surName>Bunnell</surName>
+         </individualName>
+         <organizationName>U.S. Geological Survey Great Lakes Science Center</organizationName>
+         <electronicMailAddress>dbunnell@usgs.gov</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0003-3521-7747</userId>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Todd</givenName>
+            <surName>Howell</surName>
+         </individualName>
+         <organizationName>Ontario Ministry of the Environment, Conservation, and Parks</organizationName>
+         <electronicMailAddress>todd.howell@proton.me</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0001-6400-3495</userId>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Ryan</givenName>
+            <surName>Lepak</surName>
+         </individualName>
+         <organizationName>U.S. Environmental Protection Agency</organizationName>
+         <electronicMailAddress>lepak.ryan@epa.gov</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0003-2806-1895</userId>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Ralph</givenName>
+            <surName>Smith</surName>
+         </individualName>
+         <organizationName>University of Waterloo</organizationName>
+         <electronicMailAddress>rsmith@uwaterloo.ca</electronicMailAddress>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Craig</givenName>
+            <givenName>E</givenName>
+            <surName>Williamson</surName>
+         </individualName>
+         <organizationName>Miami University</organizationName>
+         <electronicMailAddress>willia85@miamioh.edu</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0001-7350-1912</userId>
+      </creator>
+      <pubDate>2024-10-03</pubDate>
+      <abstract>
+         <para>The Laurentian Great Lakes in the mid-east region of North America is one of the largest freshwater ecosystems in the world. This data set contains limnological data, focusing on underwater transparency in this ecosystem and the surrounding region, beginning in 1999. Current water transparency data sets highlight the increase in offshore transparency measured by a deepening of average Secchi Disk depth since the invasion of the Dreissenid mussels. However, limited data exists on the Great Lakes to provide insight to the underwater optical environment of the offshore, nearshore, and surrounding water bodies of these lakes. These data illustrate the vertical underwater light environment with data from wavelengths of sunlight including photosynthetically active radiation (400 – 700 nm), UV-A radiation (320 - 400 nm) and UV-B radiation (290 - 320 nm). Understanding the depths to which these specific wavelengths of sunlight reach within a lake, as well as the substances within the lake that may influence the attenuation of sunlight can provide a picture of how habitats within the lake system have been impacted. This data set is a part of a continuous data collaboration among multiple research groups, and will be updated periodically as more data are made available. As such, this initial data set provides a snapshot of water transparency in the Great Lakes, and more sampling sites and years of data are forthcoming.</para>
+         <para>The data here are contained in four files, including Data_GreatLakes.csv, SiteInformation_GreatLakes.csv, Methods_GreatLakes.csv, and Variables_GreatLakes. The main data are in Data_GreatLakes.csv. SiteInformation_GreatLakes.csv, Methods_GreatLakes.csv, and Variables_GreatLakes.csv support the main data file with descriptions of the sampling sites, methods by which samples were processed, and descriptions of variables, respectively.&#xD;
+</para>
+      </abstract>
+      <keywordSet>
+         <keyword>lake</keyword>
+         <keyword>limnology</keyword>
+         <keyword>freshwater</keyword>
+         <keyword>temperature</keyword>
+         <keyword>water quality</keyword>
+         <keyword>water properties</keyword>
+         <keywordThesaurus>LTER Controlled Vocabulary</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+         <keyword>water transparency</keyword>
+         <keyword>ultraviolet radiation</keyword>
+         <keyword>UV radiation</keyword>
+         <keyword>inlandWaters</keyword>
+         <keyword>environment</keyword>
+         <keyword>Great Lakes Region</keyword>
+      </keywordSet>
+      <intellectualRights>
+         <para>This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on the website https://portal.edirepository.org (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.
+</para>
+      </intellectualRights>
+      <coverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Cobourg3555</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.029028</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.029028</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.965056</northBoundingCoordinate>
+               <southBoundingCoordinate>43.965056</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Cobourg3552</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.035944</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.035944</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.964472</northBoundingCoordinate>
+               <southBoundingCoordinate>43.964472</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Cobourg3553</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.033333</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.033333</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.959306</northBoundingCoordinate>
+               <southBoundingCoordinate>43.959306</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Cobourg3554</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.030944</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.030944</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.950222</northBoundingCoordinate>
+               <southBoundingCoordinate>43.950222</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Cobourg1037</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.02678</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.02678</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.93526</northBoundingCoordinate>
+               <southBoundingCoordinate>43.93526</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_TorontoEast3787</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.15379</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.15379</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.75712</northBoundingCoordinate>
+               <southBoundingCoordinate>43.75712</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_TorontoEast3788</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.15176</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.15176</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.75312</northBoundingCoordinate>
+               <southBoundingCoordinate>43.75312</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_TorontoEast3783</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.18433</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.18433</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.73416</northBoundingCoordinate>
+               <southBoundingCoordinate>43.73416</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_TorontoEast3784</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.17081</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.17081</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.72525</northBoundingCoordinate>
+               <southBoundingCoordinate>43.72525</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_TorontoEast1035</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.16126</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.16126</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.71398</northBoundingCoordinate>
+               <southBoundingCoordinate>43.71398</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Oakville3988</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.66011</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.66011</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.44664</northBoundingCoordinate>
+               <southBoundingCoordinate>43.44664</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Oakville3989</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.65693</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.65693</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.44408</northBoundingCoordinate>
+               <southBoundingCoordinate>43.44408</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Oakville3990</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.65495</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.65495</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.44318</northBoundingCoordinate>
+               <southBoundingCoordinate>43.44318</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Oakville3991</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.64531</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.64531</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.43762</northBoundingCoordinate>
+               <southBoundingCoordinate>43.43762</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Oakville1036</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.63846</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.63846</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.43336</northBoundingCoordinate>
+               <southBoundingCoordinate>43.43336</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBNawash</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.06582</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.06582</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.92928486</northBoundingCoordinate>
+               <southBoundingCoordinate>44.92928486</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GrandBend</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.83008</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.83008</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.294027</northBoundingCoordinate>
+               <southBoundingCoordinate>43.294027</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_StokesBayOS</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.487833</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.487833</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.978056</northBoundingCoordinate>
+               <southBoundingCoordinate>44.978056</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBPointeAuxBaril</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.42815833</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.42815833</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.54181389</northBoundingCoordinate>
+               <southBoundingCoordinate>45.54181389</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBFrenchRiiver</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.91611111</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.91611111</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.91325</northBoundingCoordinate>
+               <southBoundingCoordinate>45.91325</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBParrySound3</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.28163889</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.28163889</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.33686111</northBoundingCoordinate>
+               <southBoundingCoordinate>45.33686111</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBParrySound1</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.0646</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.0646</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.33987</northBoundingCoordinate>
+               <southBoundingCoordinate>45.33987</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBMoonIsland</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.08883333</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.08883333</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.13411111</northBoundingCoordinate>
+               <southBoundingCoordinate>45.13411111</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBGoHomeBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.97400278</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.97400278</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.98462778</northBoundingCoordinate>
+               <southBoundingCoordinate>44.98462778</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBSevernSound</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.85036111</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.85036111</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.78897222</northBoundingCoordinate>
+               <southBoundingCoordinate>44.78897222</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBNottawasagaBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.07109444</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.07109444</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.60302778</northBoundingCoordinate>
+               <southBoundingCoordinate>44.60302778</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBCollingwood</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.24944444</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.24944444</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.55247222</northBoundingCoordinate>
+               <southBoundingCoordinate>44.55247222</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBOwenSound</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.92697222</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.92697222</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.60308333</northBoundingCoordinate>
+               <southBoundingCoordinate>44.60308333</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBColpoysBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.98847222</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.98847222</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.83461111</northBoundingCoordinate>
+               <southBoundingCoordinate>44.83461111</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_Tobermory</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.69990833</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.69990833</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.29988889</northBoundingCoordinate>
+               <southBoundingCoordinate>45.29988889</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_SouthBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.00472222</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.00472222</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.57527778</northBoundingCoordinate>
+               <southBoundingCoordinate>45.57527778</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_StokesBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.41005556</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.41005556</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.97041667</northBoundingCoordinate>
+               <southBoundingCoordinate>44.97041667</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_SouthHampton</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.38252778</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.38252778</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.51416667</northBoundingCoordinate>
+               <southBoundingCoordinate>44.51416667</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_Kincardine</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.71614444</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.71614444</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.18355556</northBoundingCoordinate>
+               <southBoundingCoordinate>44.18355556</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_Goderich</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.73805556</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.73805556</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.74916667</northBoundingCoordinate>
+               <southBoundingCoordinate>43.74916667</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_CapeIpperwash</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.02391667</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.02391667</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.25775</northBoundingCoordinate>
+               <southBoundingCoordinate>43.25775</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_GBParrySound2</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.06083333</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.06083333</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.33611111</northBoundingCoordinate>
+               <southBoundingCoordinate>45.33611111</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_SaubleBeachSmith39</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.3789</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.3789</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.65722</northBoundingCoordinate>
+               <southBoundingCoordinate>44.65722</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_LittlePikeBayOSSmith40</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.4372</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.4372</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.89889</northBoundingCoordinate>
+               <southBoundingCoordinate>44.89889</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_AlpenaOSSmith44</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.6844</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.6844</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.01694</northBoundingCoordinate>
+               <southBoundingCoordinate>45.01694</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_MackinacStraitsSmith64</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.755</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.755</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.81333</northBoundingCoordinate>
+               <southBoundingCoordinate>45.81333</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_MackinacIslandSmith65</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.5667</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.5667</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.845</northBoundingCoordinate>
+               <southBoundingCoordinate>45.845</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_MarquetteIslandOSSmith66</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.2985</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.2985</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.86306</northBoundingCoordinate>
+               <southBoundingCoordinate>45.86306</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_SaginawBay2Smith96</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-83.1714</westBoundingCoordinate>
+               <eastBoundingCoordinate>-83.1714</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.12639</northBoundingCoordinate>
+               <southBoundingCoordinate>44.12639</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_NorthChannel</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-76.73514</westBoundingCoordinate>
+               <eastBoundingCoordinate>-76.73514</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.18069</northBoundingCoordinate>
+               <southBoundingCoordinate>44.18069</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_SLRLakeStFrancis</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-74.41608</westBoundingCoordinate>
+               <eastBoundingCoordinate>-74.41608</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.13672</northBoundingCoordinate>
+               <southBoundingCoordinate>45.13672</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_SLRPrescott</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-75.5315</westBoundingCoordinate>
+               <eastBoundingCoordinate>-75.5315</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.69839</northBoundingCoordinate>
+               <southBoundingCoordinate>44.69839</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_SixMileCreek</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.97853</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.97853</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.31986</northBoundingCoordinate>
+               <southBoundingCoordinate>43.31986</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_HHHamilton</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.83625</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.83625</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.28881</northBoundingCoordinate>
+               <southBoundingCoordinate>43.28881</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_SLRMcDonnellBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-76.37458</westBoundingCoordinate>
+               <eastBoundingCoordinate>-76.37458</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.23428</northBoundingCoordinate>
+               <southBoundingCoordinate>44.23428</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_BoQTrenton</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-77.54383</westBoundingCoordinate>
+               <eastBoundingCoordinate>-77.54383</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.08831</northBoundingCoordinate>
+               <southBoundingCoordinate>44.08831</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Pickering</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.08501</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.08501</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.79361</northBoundingCoordinate>
+               <southBoundingCoordinate>43.79361</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_PortCredit</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.569</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.569</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.54230556</northBoundingCoordinate>
+               <southBoundingCoordinate>43.54230556</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_TorontoHarbour</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.36994</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.36994</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.63158</northBoundingCoordinate>
+               <southBoundingCoordinate>43.63158</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_HumberBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.44681</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.44681</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.62331</northBoundingCoordinate>
+               <southBoundingCoordinate>43.62331</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Presquile</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-77.70864</westBoundingCoordinate>
+               <eastBoundingCoordinate>-77.70864</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.01517</northBoundingCoordinate>
+               <southBoundingCoordinate>44.01517</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_PortDalhousie</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.28328</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.28328</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.22772</northBoundingCoordinate>
+               <southBoundingCoordinate>43.22772</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_StoneyCreek</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.67111</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.67111</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.26819</northBoundingCoordinate>
+               <southBoundingCoordinate>43.26819</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_PrinceEdwardCounty</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-76.81168767</westBoundingCoordinate>
+               <eastBoundingCoordinate>-76.81168767</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.95791518</northBoundingCoordinate>
+               <southBoundingCoordinate>43.95791518</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Etobicoke</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.51594</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.51594</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.57272</northBoundingCoordinate>
+               <southBoundingCoordinate>43.57272</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Cobourg</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.01236</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.01236</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.95333</northBoundingCoordinate>
+               <southBoundingCoordinate>43.95333</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_NewCastle</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.56128</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.56128</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.88019</northBoundingCoordinate>
+               <southBoundingCoordinate>43.88019</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_Oakville</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.66067</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.66067</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.42581</northBoundingCoordinate>
+               <southBoundingCoordinate>43.42581</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_SCRStClairRiver</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.45747</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.45747</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.89728</northBoundingCoordinate>
+               <southBoundingCoordinate>42.89728</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_DRFightingIsland</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-83.10875</westBoundingCoordinate>
+               <eastBoundingCoordinate>-83.10875</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.19772</northBoundingCoordinate>
+               <southBoundingCoordinate>42.19772</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_SCRLakeStClairEast</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.43261</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.43261</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.37256</northBoundingCoordinate>
+               <southBoundingCoordinate>42.37256</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_SCRLakeStClairUpper</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.70256</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.70256</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.50158</northBoundingCoordinate>
+               <southBoundingCoordinate>42.50158</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_SCRStClairRiver-IA</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.46633</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.46633</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.86336</northBoundingCoordinate>
+               <southBoundingCoordinate>42.86336</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_GrandRiverRiver</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.57161</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.57161</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.87172</northBoundingCoordinate>
+               <southBoundingCoordinate>42.87172</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_Leamington</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.55986</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.55986</eastBoundingCoordinate>
+               <northBoundingCoordinate>41.96694</northBoundingCoordinate>
+               <southBoundingCoordinate>41.96694</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_WesternBasin</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-83.09631</westBoundingCoordinate>
+               <eastBoundingCoordinate>-83.09631</eastBoundingCoordinate>
+               <northBoundingCoordinate>41.85681</northBoundingCoordinate>
+               <southBoundingCoordinate>41.85681</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_PortCrewe</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.14869444</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.14869444</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.16366667</northBoundingCoordinate>
+               <southBoundingCoordinate>42.16366667</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_GrandRiverLake</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.58994</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.58994</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.84067</northBoundingCoordinate>
+               <southBoundingCoordinate>42.84067</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_Nanticoke</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-79.98236</westBoundingCoordinate>
+               <eastBoundingCoordinate>-79.98236</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.77497</northBoundingCoordinate>
+               <southBoundingCoordinate>42.77497</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_PortStanley</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.18553</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.18553</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.63772</northBoundingCoordinate>
+               <southBoundingCoordinate>42.63772</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_PointeAuxPins</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.82817</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.82817</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.28197</northBoundingCoordinate>
+               <southBoundingCoordinate>42.28197</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_FortErie</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-78.93039</westBoundingCoordinate>
+               <eastBoundingCoordinate>-78.93039</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.87186</northBoundingCoordinate>
+               <southBoundingCoordinate>42.87186</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_LongPointBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-80.28483</westBoundingCoordinate>
+               <eastBoundingCoordinate>-80.28483</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.65319</northBoundingCoordinate>
+               <southBoundingCoordinate>42.65319</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_Colchester</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.96119</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.96119</eastBoundingCoordinate>
+               <northBoundingCoordinate>41.96831</northBoundingCoordinate>
+               <southBoundingCoordinate>41.96831</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_PortGlasgow</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.63875</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.63875</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.40478</northBoundingCoordinate>
+               <southBoundingCoordinate>42.40478</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_BigTroutBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-89.47153</westBoundingCoordinate>
+               <eastBoundingCoordinate>-89.47153</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.05208</northBoundingCoordinate>
+               <southBoundingCoordinate>48.05208</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_NCSpanishHarbour</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.39219</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.39219</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.17331</northBoundingCoordinate>
+               <southBoundingCoordinate>46.17331</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_SMRStMarysRiver</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.4656</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.4656</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.49371</northBoundingCoordinate>
+               <southBoundingCoordinate>46.49371</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_SMRStJosephChannel</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.03491</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.03491</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.30029</northBoundingCoordinate>
+               <southBoundingCoordinate>46.30029</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_SMRLakeStGeorge</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.11642</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.11642</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.48628</northBoundingCoordinate>
+               <southBoundingCoordinate>46.48628</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_FlatlandIsland</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-89.26347</westBoundingCoordinate>
+               <eastBoundingCoordinate>-89.26347</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.212</northBoundingCoordinate>
+               <southBoundingCoordinate>48.212</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_WelcomeIsland</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-89.15592</westBoundingCoordinate>
+               <eastBoundingCoordinate>-89.15592</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.36693</northBoundingCoordinate>
+               <southBoundingCoordinate>48.36693</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_SturgeonBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-88.44633</westBoundingCoordinate>
+               <eastBoundingCoordinate>-88.44633</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.52814</northBoundingCoordinate>
+               <southBoundingCoordinate>48.52814</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_NipigonBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-88.19569</westBoundingCoordinate>
+               <eastBoundingCoordinate>-88.19569</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.93062</northBoundingCoordinate>
+               <southBoundingCoordinate>48.93062</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_Rossport</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-87.51789</westBoundingCoordinate>
+               <eastBoundingCoordinate>-87.51789</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.82984</northBoundingCoordinate>
+               <southBoundingCoordinate>48.82984</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_JackfishBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-86.98494</westBoundingCoordinate>
+               <eastBoundingCoordinate>-86.98494</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.80288</northBoundingCoordinate>
+               <southBoundingCoordinate>48.80288</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_PeninsulaHarbour</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-86.41709</westBoundingCoordinate>
+               <eastBoundingCoordinate>-86.41709</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.74563</northBoundingCoordinate>
+               <southBoundingCoordinate>48.74563</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_WarpBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-85.00761</westBoundingCoordinate>
+               <eastBoundingCoordinate>-85.00761</eastBoundingCoordinate>
+               <northBoundingCoordinate>47.58464</northBoundingCoordinate>
+               <southBoundingCoordinate>47.58464</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_GoulaisBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.48648</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.48648</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.71935</northBoundingCoordinate>
+               <southBoundingCoordinate>46.71935</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_NCNorthChannel</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-82.28664</westBoundingCoordinate>
+               <eastBoundingCoordinate>-82.28664</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.09856</northBoundingCoordinate>
+               <southBoundingCoordinate>46.09856</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_MichipicotenRiver</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-84.85644</westBoundingCoordinate>
+               <eastBoundingCoordinate>-84.85644</eastBoundingCoordinate>
+               <northBoundingCoordinate>47.94232</northBoundingCoordinate>
+               <southBoundingCoordinate>47.94232</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_OtterHead</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-86.03397</westBoundingCoordinate>
+               <eastBoundingCoordinate>-86.03397</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.10158</northBoundingCoordinate>
+               <southBoundingCoordinate>48.10158</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_BlackBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-88.52294444</westBoundingCoordinate>
+               <eastBoundingCoordinate>-88.52294444</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.60161111</northBoundingCoordinate>
+               <southBoundingCoordinate>48.60161111</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_OuterNipigonBay</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-87.95313889</westBoundingCoordinate>
+               <eastBoundingCoordinate>-87.95313889</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.87127778</northBoundingCoordinate>
+               <southBoundingCoordinate>48.87127778</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_McKellarHarbour</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-86.70594444</westBoundingCoordinate>
+               <eastBoundingCoordinate>-86.70594444</eastBoundingCoordinate>
+               <northBoundingCoordinate>48.80130556</northBoundingCoordinate>
+               <southBoundingCoordinate>48.80130556</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Erie_37</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-81.58</westBoundingCoordinate>
+               <eastBoundingCoordinate>-81.58</eastBoundingCoordinate>
+               <northBoundingCoordinate>42.11</northBoundingCoordinate>
+               <southBoundingCoordinate>42.11</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Huron_54M</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-83.416</westBoundingCoordinate>
+               <eastBoundingCoordinate>-83.416</eastBoundingCoordinate>
+               <northBoundingCoordinate>45.516</northBoundingCoordinate>
+               <southBoundingCoordinate>45.516</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Michigan_40</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-86.966</westBoundingCoordinate>
+               <eastBoundingCoordinate>-86.966</eastBoundingCoordinate>
+               <northBoundingCoordinate>44.759</northBoundingCoordinate>
+               <southBoundingCoordinate>44.759</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Ontario_49</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-77.438</westBoundingCoordinate>
+               <eastBoundingCoordinate>-77.438</eastBoundingCoordinate>
+               <northBoundingCoordinate>43.772</northBoundingCoordinate>
+               <southBoundingCoordinate>43.772</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <geographicCoverage>
+            <geographicDescription>Superior_05</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-86.55567</westBoundingCoordinate>
+               <eastBoundingCoordinate>-86.55567</eastBoundingCoordinate>
+               <northBoundingCoordinate>46.77483</northBoundingCoordinate>
+               <southBoundingCoordinate>46.77483</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <temporalCoverage>
+            <rangeOfDates>
+               <beginDate>
+                  <calendarDate>1999-08-18</calendarDate>
+               </beginDate>
+               <endDate>
+                  <calendarDate>2022-11-15</calendarDate>
+               </endDate>
+            </rangeOfDates>
+         </temporalCoverage>
+      </coverage>
+      <maintenance>
+         <description>ongoing</description>
+      </maintenance>
+      <contact>
+         <individualName>
+            <givenName>Nicole</givenName>
+            <givenName>L</givenName>
+            <surName>Berry</surName>
+         </individualName>
+         <organizationName>U.S. Geological Survey Great Lakes Science Center</organizationName>
+         <electronicMailAddress>nberry@usgs.gov</electronicMailAddress>
+         <userId directory="https://orcid.org">https://orcid.org/0000-0002-7889-197X</userId>
+      </contact>
+      <publisher>
+         <organizationName>Environmental Data Initiative</organizationName>
+         <electronicMailAddress>info@edirepository.org</electronicMailAddress>
+         <onlineUrl>https://edirepository.org</onlineUrl>
+         <userId directory="https://ror.org">0330j0z60</userId>
+      </publisher>
+      <pubPlace>Environmental Data Initiative</pubPlace>
+      <methods>
+         <methodStep>
+            <description>
+               <para>Since 1999, water transparency data have been collected on the Laurentian Great Lakes and water bodies in the Great Lakes region during the ice-free season. The frequency of this sampling ranges from a single sample for a given site to multiple samples within a year for a site, as the collection of these samples has been a collaborative effort among multiple research groups. Light profiles were collected in the water column of the lakes using PUV-2500 radiometers (Biospherical Instruments) or OCI-200 (Satlantic) instruments, and calculations were performed post-data collection. Method details, including specific instrument used, can be found in the Methods_GreatLakes table, which is tied to the Data_GreatLakes table by the MethodID column.&#xD;
+</para>
+            </description>
+         </methodStep>
+         <methodStep>
+            <description>This provenance metadata does not contain entity specific information.</description>
+            <dataSource>
+               <title>Ontario Ministry: Environment, Conservation, and Parks Data Catalogue</title>
+               <creator>
+                  <individualName>
+                     <givenName>Todd</givenName>
+                     <surName>Howell</surName>
+                  </individualName>
+                  <organizationName>Ontario Ministry of the Environment, Conservation, and Parks</organizationName>
+                  <electronicMailAddress>todd.howell@proton.me</electronicMailAddress>
+               </creator>
+               <distribution>
+                  <online>
+                     <onlineDescription>Data are collected each year, according to the lake-by-lake cycle. Water chemistry, sediment chemistry, and benthic invertebrate composition data are available for the Great Lakes Nearshore Area.</onlineDescription>
+                     <url>https://data.ontario.ca/organization/environment-conservation-and-parks?keywords_en=Great+Lakes+Nearshore</url>
+                  </online>
+               </distribution>
+               <contact>
+                  <individualName>
+                     <givenName>Todd</givenName>
+                     <surName>Howell</surName>
+                  </individualName>
+                  <organizationName>Ontario Ministry of the Environment, Conservation, and Parks</organizationName>
+                  <electronicMailAddress>todd.howell@proton.me</electronicMailAddress>
+               </contact>
+            </dataSource>
+         </methodStep>
+         <methodStep>
+            <description>This provenance metadata does not contain entity specific information.</description>
+            <dataSource>
+               <title>Smith et al 2004</title>
+               <creator>
+                  <individualName>
+                     <givenName>Ralph</givenName>
+                     <surName>Smith</surName>
+                  </individualName>
+                  <organizationName>University of Waterloo</organizationName>
+                  <electronicMailAddress>rsmith@uwaterloo.ca</electronicMailAddress>
+               </creator>
+               <distribution>
+                  <online>
+                     <onlineDescription>Lake Huron 1999 data are published in this manuscript</onlineDescription>
+                     <url>https://doi.org/10.1016/S0380-1330(04)70354-8</url>
+                  </online>
+               </distribution>
+               <contact>
+                  <individualName>
+                     <givenName>Ralph</givenName>
+                     <surName>Smith</surName>
+                  </individualName>
+                  <organizationName>University of Waterloo</organizationName>
+                  <electronicMailAddress>rsmith@uwaterloo.ca</electronicMailAddress>
+               </contact>
+            </dataSource>
+         </methodStep>
+         <methodStep>
+            <description>This provenance metadata does not contain entity specific information.</description>
+            <dataSource>
+               <title>Lepak et al. 2018</title>
+               <creator>
+                  <individualName>
+                     <givenName>Ryan</givenName>
+                     <surName>Lepak</surName>
+                  </individualName>
+                  <organizationName>U.S. Environmental Protection Agency</organizationName>
+                  <electronicMailAddress>lepak.ryan@epa.gov</electronicMailAddress>
+               </creator>
+               <distribution>
+                  <online>
+                     <onlineDescription>This manuscript data from 2011 from each of the Laurentian Great Lakes</onlineDescription>
+                     <url>https://doi.org/10.1021/acs.est.7b06120</url>
+                  </online>
+               </distribution>
+               <contact>
+                  <individualName>
+                     <givenName>Ryan</givenName>
+                     <surName>Lepak</surName>
+                  </individualName>
+                  <organizationName>U.S. Environmental Protection Agency</organizationName>
+                  <electronicMailAddress>lepak.ryan@epa.gov</electronicMailAddress>
+               </contact>
+            </dataSource>
+         </methodStep>
+      </methods>
+      <project>
+         <title>Identifying an emerging Lake Whitefish restoration barrier in the Great Lakes: habitat-mediated exposure to ultraviolet radiation</title>
+         <personnel>
+            <individualName>
+               <givenName>Craig</givenName>
+               <givenName>E</givenName>
+               <surName>Williamson</surName>
+            </individualName>
+            <organizationName>Miami University</organizationName>
+            <electronicMailAddress>willia85@miamioh.edu</electronicMailAddress>
+            <userId directory="https://orcid.org">https://orcid.org/0000-0001-7350-1912</userId>
+            <role>Principal Investigator</role>
+         </personnel>
+         <funding>U.S. Fish and Wildlife F22AP02900</funding>
+         <relatedProject>
+            <title>Quantifying the Importance of Multiple Nursery Habitats to Alewife Population Recruitment and Population Resilience</title>
+            <personnel>
+               <individualName>
+                  <givenName>Craig</givenName>
+                  <givenName>E</givenName>
+                  <surName>Williamson</surName>
+               </individualName>
+               <organizationName>Miami University</organizationName>
+               <electronicMailAddress>willia85@miamioh.edu</electronicMailAddress>
+               <userId directory="https://orcid.org">https://orcid.org/0000-0001-7350-1912</userId>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>Great Lakes Fisheries Trust 2019.1806</funding>
+         </relatedProject>
+         <relatedProject>
+            <title>OPUS: CRS Synthesis to add dissolved organic matter to the trophic paradigm: the importance of water transparency in structuring pelagic ecosystems</title>
+            <personnel>
+               <individualName>
+                  <givenName>Craig</givenName>
+                  <givenName>E</givenName>
+                  <surName>Williamson</surName>
+               </individualName>
+               <organizationName>Miami University</organizationName>
+               <electronicMailAddress>willia85@miamioh.edu</electronicMailAddress>
+               <userId directory="https://orcid.org">https://orcid.org/0000-0001-7350-1912</userId>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>National Science Foundation NSF DEB-1950170</funding>
+         </relatedProject>
+         <relatedProject>
+            <title>Collaborative LTREB Proposal: Will increases in dissolved organic matter accelerate a shift in trophic status through anoxia-driven positive feedbacks in an oligotrophic lake?</title>
+            <personnel>
+               <individualName>
+                  <givenName>Craig</givenName>
+                  <givenName>E</givenName>
+                  <surName>Williamson</surName>
+               </individualName>
+               <organizationName>Miami University</organizationName>
+               <electronicMailAddress>willia85@miamioh.edu</electronicMailAddress>
+               <userId directory="https://orcid.org">https://orcid.org/0000-0001-7350-1912</userId>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>National Science Foundation NSF DEB-1754276</funding>
+         </relatedProject>
+         <relatedProject>
+            <title>Ohio Eminent Scholar in Ecosystem Ecology</title>
+            <personnel>
+               <individualName>
+                  <givenName>Craig</givenName>
+                  <givenName>E</givenName>
+                  <surName>Williamson</surName>
+               </individualName>
+               <organizationName>Miami University</organizationName>
+               <electronicMailAddress>willia85@miamioh.edu</electronicMailAddress>
+               <userId directory="https://orcid.org">https://orcid.org/0000-0001-7350-1912</userId>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>Miami University</funding>
+         </relatedProject>
+         <relatedProject>
+            <title>Dissertation: Does ultraviolet radiation have the potential to influence the early life stages of Great Lakes fish?</title>
+            <personnel>
+               <individualName>
+                  <givenName>Nicole</givenName>
+                  <givenName>L</givenName>
+                  <surName>Berry</surName>
+               </individualName>
+               <organizationName>Miami University</organizationName>
+               <electronicMailAddress>nberry@usgs.gov</electronicMailAddress>
+               <userId directory="https://orcid.org">https://orcid.org/0000-0002-7889-197X</userId>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>Miami University</funding>
+         </relatedProject>
+         <relatedProject>
+            <title>Evaluating how changing climate and water clarity can affect restoration of native coregonines in midwestern lakes</title>
+            <personnel>
+               <individualName>
+                  <givenName>David</givenName>
+                  <surName>Bunnell</surName>
+               </individualName>
+               <organizationName>U.S. Geological Survey Great Lakes Science Center</organizationName>
+               <electronicMailAddress>dbunnell@usgs.gov</electronicMailAddress>
+               <userId directory="https://orcid.org">https://orcid.org/0000-0003-3521-7747</userId>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>U.S. Geological Survey Midwest Climate Adaptation Science Center G21AC10726 (2021)</funding>
+         </relatedProject>
+         <relatedProject>
+            <title>Environmental control of primary production in large lakes, NSERC Discovery Grant Program, R. Smith</title>
+            <personnel>
+               <individualName>
+                  <givenName>Ralph</givenName>
+                  <surName>Smith</surName>
+               </individualName>
+               <organizationName>University of Waterloo</organizationName>
+               <electronicMailAddress>rsmith@uwaterloo.ca</electronicMailAddress>
+               <role>Principal Investigator</role>
+            </personnel>
+            <funding>NSERC Discovery Grant</funding>
+         </relatedProject>
+      </project>
+      <dataTable id="a451c8f79383e1b31ec979e4717b0023"
+                 scope="document"
+                 system="https://pasta.edirepository.org">
+         <entityName>Great Lakes Data</entityName>
+         <entityDescription>Limnological data from the Great Lakes, with a focus on UV transparency</entityDescription>
+         <physical>
+            <objectName>Data_GreatLakes.csv</objectName>
+            <size unit="bytes">1332677</size>
+            <authentication method="MD5">c4d01d9db28f50965884b574b2577627</authentication>
+            <dataFormat>
+               <textFormat>
+                  <numHeaderLines>1</numHeaderLines>
+                  <recordDelimiter>\r\n</recordDelimiter>
+                  <attributeOrientation>column</attributeOrientation>
+                  <simpleDelimited>
+                     <fieldDelimiter>,</fieldDelimiter>
+                     <quoteCharacter>"</quoteCharacter>
+                  </simpleDelimited>
+               </textFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url function="download">https://pasta.lternet.edu/package/data/eml/edi/1321/6/a451c8f79383e1b31ec979e4717b0023</url>
+               </online>
+            </distribution>
+         </physical>
+         <attributeList>
+            <attribute>
+               <attributeName>SiteID</attributeName>
+               <attributeDefinition>Unique code given to each lake. Can be used as a foreign key to tie Data_GreatLakes and SiteInformation_GreatLakes tables.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>Site1055</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1056</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1057</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1058</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1059</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1060</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1061</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1062</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1063</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1064</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1065</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1066</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1067</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1068</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1069</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1070</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1071</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site1074</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site569</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site570</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site571</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site572</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site573</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site574</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site575</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site576</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site577</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site578</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site579</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site580</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site581</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site582</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site583</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site584</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site585</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site586</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site587</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site589</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site590</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site591</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site592</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site593</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site594</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site595</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site596</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site597</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site598</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site599</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site600</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site601</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site602</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site605</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site606</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site608</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site609</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site610</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site611</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site612</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site613</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site614</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site615</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site616</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site617</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site619</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site620</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site621</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site622</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site623</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site624</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site625</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site626</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site627</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site628</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site629</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site630</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site631</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site632</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site633</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site634</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site635</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site636</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site637</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site638</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site639</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site640</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site641</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site642</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site643</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site644</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site645</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site646</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site647</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site648</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site649</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site650</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site651</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site652</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site653</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site654</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site655</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site669</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site670</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site671</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site672</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Site673</code>
+                              <definition>A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Site</attributeName>
+               <attributeDefinition>Common name given to each sampling location. Site names typically begin with the name of the major lake followed by a name or number specifying a site within the lake.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>Erie_37</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_Colchester</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_DRFightingIsland</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_FortErie</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_GrandRiverLake</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_GrandRiverRiver</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_Leamington</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_LongPointBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_Nanticoke</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_PointeAuxPins</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_PortCrewe</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_PortGlasgow</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_PortStanley</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_SCRLakeStClairEast</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_SCRLakeStClairUpper</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_SCRStClairRiver</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_SCRStClairRiver-IA</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Erie_WesternBasin</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_54M</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_AlpenaOSSmith44</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_CapeIpperwash</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBCollingwood</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBColpoysBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBFrenchRiiver</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBGoHomeBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBMoonIsland</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBNawash</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBNottawasagaBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBOwenSound</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBParrySound1</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBParrySound2</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBParrySound3</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBPointeAuxBaril</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GBSevernSound</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_Goderich</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_GrandBend</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_Kincardine</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_LittlePikeBayOSSmith40</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_MackinacIslandSmith65</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_MackinacStraitsSmith64</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_MarquetteIslandOSSmith66</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_SaginawBay2Smith96</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_SaubleBeachSmith39</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_SouthBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_SouthHampton</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_StokesBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_StokesBayOS</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron_Tobermory</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Michigan_40</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_49</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_BoQTrenton</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Cobourg</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Cobourg1037</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Cobourg3552</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Cobourg3553</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Cobourg3554</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Cobourg3555</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Etobicoke</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_HHHamilton</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_HumberBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_NewCastle</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_NorthChannel</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Oakville</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Oakville1036</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Oakville3988</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Oakville3989</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Oakville3990</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Oakville3991</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Pickering</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_PortCredit</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_PortDalhousie</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_Presquile</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_PrinceEdwardCounty</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_SLRLakeStFrancis</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_SLRMcDonnellBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_SLRPrescott</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_SixMileCreek</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_StoneyCreek</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_TorontoEast1035</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_TorontoEast3783</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_TorontoEast3784</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_TorontoEast3787</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_TorontoEast3788</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario_TorontoHarbour</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_05</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_BigTroutBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_BlackBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_FlatlandIsland</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_GoulaisBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_JackfishBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_McKellarHarbour</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_MichipicotenRiver</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_NCNorthChannel</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_NCSpanishHarbour</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_NipigonBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_OtterHead</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_OuterNipigonBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_PeninsulaHarbour</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_Rossport</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_SMRLakeStGeorge</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_SMRStJosephChannel</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_SMRStMarysRiver</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_SturgeonBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_WarpBay</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior_WelcomeIsland</code>
+                              <definition>Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Date</attributeName>
+               <attributeDefinition>Local date and time when sample was collected. Note that for time of 00:00 sample collection time was not recorded, but was during daylight hours.</attributeDefinition>
+               <storageType>date</storageType>
+               <measurementScale>
+                  <dateTime>
+                     <formatString>YYYY-MM-DD hh:mm</formatString>
+                     <dateTimeDomain/>
+                  </dateTime>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Depth</attributeName>
+               <attributeDefinition>Depth below the surface of the lake at which data were collected</attributeDefinition>
+               <storageType>float</storageType>
+               <measurementScale>
+                  <ratio>
+                     <unit>
+                        <standardUnit>meter</standardUnit>
+                     </unit>
+                     <numericDomain>
+                        <numberType>real</numberType>
+                        <bounds>
+                           <minimum exclusive="false">0.5</minimum>
+                           <maximum exclusive="false">2</maximum>
+                        </bounds>
+                     </numericDomain>
+                  </ratio>
+               </measurementScale>
+               <missingValueCode>
+                  <code>NAN</code>
+                  <codeExplanation>No depth is associated with this sample</codeExplanation>
+               </missingValueCode>
+            </attribute>
+            <attribute>
+               <attributeName>Variable</attributeName>
+               <attributeDefinition>Variable measured. Variables are defined in Variables_GreatLakes table. This column can be used as a foreign key to tie to the Variables_GreatLakes table.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>Kd305</code>
+                              <definition>Diffuse attenuation coefficient of light at 305 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd313</code>
+                              <definition>Diffuse attenuation coefficient of light at 313 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd320</code>
+                              <definition>Diffuse attenuation coefficient of light at 320 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd325</code>
+                              <definition>Diffuse attenuation coefficient of light at 325 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd340</code>
+                              <definition>Diffuse attenuation coefficient of light at 340 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd380</code>
+                              <definition>Diffuse attenuation coefficient of light at 380 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd395</code>
+                              <definition>Diffuse attenuation coefficient of light at 395 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd443</code>
+                              <definition>Diffuse attenuation coefficient of light at 443 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd491</code>
+                              <definition>Diffuse attenuation coefficient of light at 491 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Kd554</code>
+                              <definition>Diffuse attenuation coefficient of light at 554 nm measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>KdPAR</code>
+                              <definition>Diffuse attenuation coefficient of PAR (photosyntheically active radiation, 400-700 nm) measured in situ with a profiling radiometer.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>max.depth</code>
+                              <definition>Maximum depth of site.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.305</code>
+                              <definition>Depth at which 305 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.313</code>
+                              <definition>Depth at which 313 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.320</code>
+                              <definition>Depth at which 320 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.325</code>
+                              <definition>Depth at which 325 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.340</code>
+                              <definition>Depth at which 340 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.380</code>
+                              <definition>Depth at which 380 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.395</code>
+                              <definition>Depth at which 395 nm radiation is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.10pc.par</code>
+                              <definition>Depth at which PAR (photosyntheically active radiation, 400-700 nm) is 10 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.305</code>
+                              <definition>Depth at which 305 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.313</code>
+                              <definition>Depth at which 313 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.320</code>
+                              <definition>Depth at which 320 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.325</code>
+                              <definition>Depth at which 325 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.340</code>
+                              <definition>Depth at which 340 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.380</code>
+                              <definition>Depth at which 380 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.395</code>
+                              <definition>Depth at which 395 nm radiation is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>ss.1pc.par</code>
+                              <definition>Depth at which PAR (photosyntheically active radiation, 400-700 nm) is 1 percent of subsurface value.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>temp0.5m</code>
+                              <definition>Water temperature, measured at 0.5 meters below the surface of the lake.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>temp2m</code>
+                              <definition>Water temperature, measured at 2 meters below the surface of the lake.</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Value</attributeName>
+               <attributeDefinition>Data value. Units are defined in the Variables_GreatLakes table</attributeDefinition>
+               <storageType>float</storageType>
+               <measurementScale>
+                  <ratio>
+                     <unit>
+                        <standardUnit>dimensionless</standardUnit>
+                     </unit>
+                     <numericDomain>
+                        <numberType>real</numberType>
+                        <bounds>
+                           <minimum exclusive="false">0.03</minimum>
+                           <maximum exclusive="false">32.08</maximum>
+                        </bounds>
+                     </numericDomain>
+                  </ratio>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>MethodID</attributeName>
+               <attributeDefinition>ID number given to each method by which measurements were taken. See Methods_GreatLakes table for details on each MethodID. Can be used as a foreign key to tie Data_GreatLakes and Methods_GreatLakes tables.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>Method166</code>
+                              <definition>Method by which sample was processed. See Methods_GreatLakes table for details on this method. To be used as a foreign key to link Data_GreatLakes and Methods_GreatLakes tables.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Method167</code>
+                              <definition>Method by which sample was processed. See Methods_GreatLakes table for details on this method. To be used as a foreign key to link Data_GreatLakes and Methods_GreatLakes tables.</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+         </attributeList>
+         <numberOfRecords>17969</numberOfRecords>
+      </dataTable>
+      <dataTable id="20c51b5f4e9aeb5334c90ff072e6f928"
+                 scope="document"
+                 system="https://pasta.edirepository.org">
+         <entityName>Methods</entityName>
+         <entityDescription>Sampling and analytical method details</entityDescription>
+         <physical>
+            <objectName>Methods_GreatLakes.csv</objectName>
+            <size unit="bytes">184</size>
+            <authentication method="MD5">6763fe2b35ea76a3e8f40a5b3e8b197e</authentication>
+            <dataFormat>
+               <textFormat>
+                  <numHeaderLines>1</numHeaderLines>
+                  <recordDelimiter>\r\n</recordDelimiter>
+                  <attributeOrientation>column</attributeOrientation>
+                  <simpleDelimited>
+                     <fieldDelimiter>,</fieldDelimiter>
+                     <quoteCharacter>"</quoteCharacter>
+                  </simpleDelimited>
+               </textFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url function="download">https://pasta.lternet.edu/package/data/eml/edi/1321/6/20c51b5f4e9aeb5334c90ff072e6f928</url>
+               </online>
+            </distribution>
+         </physical>
+         <attributeList>
+            <attribute>
+               <attributeName>MethodID</attributeName>
+               <attributeDefinition>ID given to each method used to collect or process the samples. This unique ID can be used as a primary key to tie the Methods_GreatLakes and Data_GreatLakes tables.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>ID given to each method used to collect or process the samples. This unique ID can be used as a primary key to tie the Methods_GreatLakes and Data_GreatLakes tables.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>MethodDetails</attributeName>
+               <attributeDefinition>Details on each method</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Details on each method</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+         </attributeList>
+         <numberOfRecords>2</numberOfRecords>
+      </dataTable>
+      <dataTable id="87c390495ad405e705c09e62ac6f58f0"
+                 scope="document"
+                 system="https://pasta.edirepository.org">
+         <entityName>Sampling Sites</entityName>
+         <entityDescription>Sampling site descriptions</entityDescription>
+         <physical>
+            <objectName>SiteInformation_GreatLakes.csv</objectName>
+            <size unit="bytes">5994</size>
+            <authentication method="MD5">a9c7660ad22a524714ce7e23f4c0d538</authentication>
+            <dataFormat>
+               <textFormat>
+                  <numHeaderLines>1</numHeaderLines>
+                  <recordDelimiter>\r\n</recordDelimiter>
+                  <attributeOrientation>column</attributeOrientation>
+                  <simpleDelimited>
+                     <fieldDelimiter>,</fieldDelimiter>
+                     <quoteCharacter>"</quoteCharacter>
+                  </simpleDelimited>
+               </textFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url function="download">https://pasta.lternet.edu/package/data/eml/edi/1321/6/87c390495ad405e705c09e62ac6f58f0</url>
+               </online>
+            </distribution>
+         </physical>
+         <attributeList>
+            <attribute>
+               <attributeName>SiteID</attributeName>
+               <attributeDefinition>Unique code given to each lake. Can be used as a primary key to tie Data_GreatLakes and SiteInformation_GreatLakes tables.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Unique code given to each lake. Can be used as a primary key to tie Data_GreatLakes and SiteInformation_GreatLakes tables.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Site</attributeName>
+               <attributeDefinition>Common name given to each sampling location. Site names typically begin with the name of the major lake followed by a name or number specifying a site within the lake.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Common name given to each sampling location. Site names typically begin with the name of the major lake followed by a name or number specifying a site within the lake.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>LakeName</attributeName>
+               <attributeDefinition>Name of the lake from which data were measured</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>Erie</code>
+                              <definition>Measurement was taken in Lake Erie</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Huron</code>
+                              <definition>Measurement was taken in Lake Huron</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Michigan</code>
+                              <definition>Measurement was taken in Lake Michigan</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Ontario</code>
+                              <definition>Measurement was taken in Lake Ontario</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>Superior</code>
+                              <definition>Measurement was taken in Lake Superior</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Latitude</attributeName>
+               <attributeDefinition>Latitude of sampling site</attributeDefinition>
+               <storageType>float</storageType>
+               <measurementScale>
+                  <ratio>
+                     <unit>
+                        <standardUnit>degree</standardUnit>
+                     </unit>
+                     <numericDomain>
+                        <numberType>real</numberType>
+                        <bounds>
+                           <minimum exclusive="false">41.85681</minimum>
+                           <maximum exclusive="false">48.93062</maximum>
+                        </bounds>
+                     </numericDomain>
+                  </ratio>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Longitude</attributeName>
+               <attributeDefinition>Longitude of sampling site</attributeDefinition>
+               <storageType>float</storageType>
+               <measurementScale>
+                  <ratio>
+                     <unit>
+                        <standardUnit>degree</standardUnit>
+                     </unit>
+                     <numericDomain>
+                        <numberType>real</numberType>
+                        <bounds>
+                           <minimum exclusive="false">-89.47153</minimum>
+                           <maximum exclusive="false">-74.41608</maximum>
+                        </bounds>
+                     </numericDomain>
+                  </ratio>
+               </measurementScale>
+            </attribute>
+         </attributeList>
+         <numberOfRecords>105</numberOfRecords>
+      </dataTable>
+      <dataTable id="0dd2a1bd6bc3c5dd4beff176f80da8bb"
+                 scope="document"
+                 system="https://pasta.edirepository.org">
+         <entityName>Variable Definitions</entityName>
+         <entityDescription>Description of variables for which data were collected</entityDescription>
+         <physical>
+            <objectName>Variables_GreatLakes.csv</objectName>
+            <size unit="bytes">3619</size>
+            <authentication method="MD5">d9cbc9995d4e2dc568c812663646238d</authentication>
+            <dataFormat>
+               <textFormat>
+                  <numHeaderLines>1</numHeaderLines>
+                  <recordDelimiter>\r\n</recordDelimiter>
+                  <attributeOrientation>column</attributeOrientation>
+                  <simpleDelimited>
+                     <fieldDelimiter>,</fieldDelimiter>
+                     <quoteCharacter>"</quoteCharacter>
+                  </simpleDelimited>
+               </textFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url function="download">https://pasta.lternet.edu/package/data/eml/edi/1321/6/0dd2a1bd6bc3c5dd4beff176f80da8bb</url>
+               </online>
+            </distribution>
+         </physical>
+         <attributeList>
+            <attribute>
+               <attributeName>Variable</attributeName>
+               <attributeDefinition>Variable measured. Entries in this column can be used as a primary key to line up with entries in the Variables column of the Data_GreatLakes table.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Variable measured. Entries in this column can be used as a primary key to line up with entries in the Variables column of the Data_GreatLakes table.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Unit</attributeName>
+               <attributeDefinition>Units in which data were measured</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>Meters</code>
+                              <definition>Unit in which data value is reported. Meter.</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>perMeter</code>
+                              <definition>Unit in which data value is reported. Per Meter.</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+            <attribute>
+               <attributeName>Definition</attributeName>
+               <attributeDefinition>Description of variable for which data were measured</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Description of variable for which data were measured</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+            </attribute>
+         </attributeList>
+         <numberOfRecords>30</numberOfRecords>
+      </dataTable>
+      <otherEntity id="a4cfac7b7a3d09de52062ada8a3a6cad"
+                   scope="document"
+                   system="https://pasta.edirepository.org">
+         <entityName>U.S. Geological Survey Metadata file</entityName>
+         <entityDescription>U.S. Geological Survey's metadata file for this data set</entityDescription>
+         <physical>
+            <objectName>MetaData_Berry-IP165376.xml</objectName>
+            <size unit="bytes">40466</size>
+            <authentication method="MD5">f5c2f14f10bcfd0756493cc7168312a3</authentication>
+            <dataFormat>
+               <externallyDefinedFormat>
+                  <formatName>application/xml</formatName>
+               </externallyDefinedFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url function="download">https://pasta.lternet.edu/package/data/eml/edi/1321/6/a4cfac7b7a3d09de52062ada8a3a6cad</url>
+               </online>
+            </distribution>
+         </physical>
+         <entityType>unknown</entityType>
+      </otherEntity>
+   </dataset>
+   <additionalMetadata>
+      <metadata>
+         <emlEditor>
+            <app>EMLassemblyline</app>
+            <release>3.5.5</release>
+         </emlEditor>
+      </metadata>
+   </additionalMetadata>
+</eml:eml>

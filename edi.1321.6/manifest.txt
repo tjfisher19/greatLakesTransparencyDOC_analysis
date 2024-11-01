@@ -1,0 +1,9 @@
+Manifest file for edi.1321.6.zip created on Wed Oct 30 00:28:23 UTC 2024
+Data_GreatLakes.csv (1332677 bytes)
+Methods_GreatLakes.csv (184 bytes)
+SiteInformation_GreatLakes.csv (5994 bytes)
+Variables_GreatLakes.csv (3619 bytes)
+MetaData_Berry-IP165376.xml (40466 bytes)
+edi.1321.6.xml (181241 bytes)
+edi.1321.6.txt (110894 bytes)
+edi.1321.6.report.xml (98555 bytes)

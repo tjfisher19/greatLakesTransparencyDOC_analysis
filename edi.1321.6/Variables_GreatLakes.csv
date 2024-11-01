@@ -1,0 +1,31 @@
+Variable,Unit,Definition
+Kd305,perMeter,Diffuse attenuation coefficient of light at 305 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd313,perMeter,Diffuse attenuation coefficient of light at 313 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd320,perMeter,Diffuse attenuation coefficient of light at 320 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd325,perMeter,Diffuse attenuation coefficient of light at 325 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd340,perMeter,Diffuse attenuation coefficient of light at 340 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd380,perMeter,Diffuse attenuation coefficient of light at 380 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd395,perMeter,Diffuse attenuation coefficient of light at 395 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd443,perMeter,Diffuse attenuation coefficient of light at 443 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd491,perMeter,Diffuse attenuation coefficient of light at 491 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+Kd554,perMeter,Diffuse attenuation coefficient of light at 554 nm measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth.
+KdPAR,perMeter,"Diffuse attenuation coefficient of PAR (photosyntheically active radiation, 400-700 nm) measured in situ with a profiling radiometer. Measured as the slope of underwater irradiance vs. depth."
+max.depth,Meters,Maximum depth of site.
+ss.10pc.305,Meters,Depth at which 305 nm radiation is 10 percent of subsurface value.
+ss.10pc.313,Meters,Depth at which 313 nm radiation is 10 percent of subsurface value.
+ss.10pc.320,Meters,Depth at which 320 nm radiation is 10 percent of subsurface value.
+ss.10pc.325,Meters,Depth at which 325 nm radiation is 10 percent of subsurface value.
+ss.10pc.340,Meters,Depth at which 340 nm radiation is 10 percent of subsurface value.
+ss.10pc.380,Meters,Depth at which 380 nm radiation is 10 percent of subsurface value.
+ss.10pc.395,Meters,Depth at which 395 nm radiation is 10 percent of subsurface value.
+ss.10pc.par,Meters,"Depth at which PAR (photosyntheically active radiation, 400-700 nm) is 10 percent of subsurface value."
+ss.1pc.305,Meters,Depth at which 305 nm radiation is 1 percent of subsurface value.
+ss.1pc.313,Meters,Depth at which 313 nm radiation is 1 percent of subsurface value.
+ss.1pc.320,Meters,Depth at which 320 nm radiation is 1 percent of subsurface value.
+ss.1pc.325,Meters,Depth at which 325 nm radiation is 1 percent of subsurface value.
+ss.1pc.340,Meters,Depth at which 340 nm radiation is 1 percent of subsurface value.
+ss.1pc.380,Meters,Depth at which 380 nm radiation is 1 percent of subsurface value.
+ss.1pc.395,Meters,Depth at which 395 nm radiation is 1 percent of subsurface value.
+ss.1pc.par,Meters,"Depth at which PAR (photosyntheically active radiation, 400-700 nm) is 1 percent of subsurface value."
+temp0.5m,Meters,"Water temperature, measured at 0.5 meters below the surface of the lake."
+temp2m,Meters,"Water temperature, measured at 2 meters below the surface of the lake."

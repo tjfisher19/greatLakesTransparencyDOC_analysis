@@ -1,0 +1,2615 @@
+
+   
+      
+         uid=EDI,o=EDI,dc=edirepository,dc=org
+         all
+      
+      
+         uid=globalchangelimno,o=EDI,dc=edirepository,dc=org
+         all
+      
+      
+         uid=usgs_reviewer,o=EDI,dc=edirepository,dc=org
+         all
+      
+   
+   
+      Water transparency in the Laurentian Great Lakes
+      
+         Nicole Berry
+         U.S. Geological Survey Great Lakes Science Center
+         nberry@usgs.gov
+         https://orcid.org/0000-0002-7889-197X
+      
+      
+         Erin Overholt
+         Miami University
+         overhoep@miamioh.edu
+         https://orcid.org/0000-0001-9078-7086
+      
+      
+         Elizabeth Mette
+         Miami University
+         dickmaem@miamioh.edu
+         https://orcid.org/0009-0007-9622-1260
+      
+      
+         David Bunnell
+         U.S. Geological Survey Great Lakes Science Center
+         dbunnell@usgs.gov
+         https://orcid.org/0000-0003-3521-7747
+      
+      
+         Todd Howell
+         Ontario Ministry of the Environment, Conservation, and Parks
+         todd.howell@proton.me
+         https://orcid.org/0000-0001-6400-3495
+      
+      
+         Ryan Lepak
+         U.S. Environmental Protection Agency
+         lepak.ryan@epa.gov
+         https://orcid.org/0000-0003-2806-1895
+      
+      
+         Ralph Smith
+         University of Waterloo
+         rsmith@uwaterloo.ca
+      
+      
+         Craig Williamson
+         Miami University
+         willia85@miamioh.edu
+         https://orcid.org/0000-0001-7350-1912
+      
+      2024-10-03
+      
+         The Laurentian Great Lakes in the mid-east region of North America is one of the largest freshwater ecosystems in the world. This data set contains limnological data, focusing on underwater transparency in this ecosystem and the surrounding region, beginning in 1999. Current water transparency data sets highlight the increase in offshore transparency measured by a deepening of average Secchi Disk depth since the invasion of the Dreissenid mussels. However, limited data exists on the Great Lakes to provide insight to the underwater optical environment of the offshore, nearshore, and surrounding water bodies of these lakes. These data illustrate the vertical underwater light environment with data from wavelengths of sunlight including photosynthetically active radiation (400 – 700 nm), UV-A radiation (320 - 400 nm) and UV-B radiation (290 - 320 nm). Understanding the depths to which these specific wavelengths of sunlight reach within a lake, as well as the substances within the lake that may influence the attenuation of sunlight can provide a picture of how habitats within the lake system have been impacted. This data set is a part of a continuous data collaboration among multiple research groups, and will be updated periodically as more data are made available. As such, this initial data set provides a snapshot of water transparency in the Great Lakes, and more sampling sites and years of data are forthcoming.
+         The data here are contained in four files, including Data_GreatLakes.csv, SiteInformation_GreatLakes.csv, Methods_GreatLakes.csv, and Variables_GreatLakes. The main data are in Data_GreatLakes.csv. SiteInformation_GreatLakes.csv, Methods_GreatLakes.csv, and Variables_GreatLakes.csv support the main data file with descriptions of the sampling sites, methods by which samples were processed, and descriptions of variables, respectively.
+
+      
+      
+         lake
+         limnology
+         freshwater
+         temperature
+         water quality
+         water properties
+         LTER Controlled Vocabulary
+      
+      
+         water transparency
+         ultraviolet radiation
+         UV radiation
+         inlandWaters
+         environment
+         Great Lakes Region
+      
+      
+         This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on the website https://portal.edirepository.org (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.
+
+      
+      
+         
+            Ontario_Cobourg3555
+            
+               -78.029028
+               -78.029028
+               43.965056
+               43.965056
+            
+         
+         
+            Ontario_Cobourg3552
+            
+               -78.035944
+               -78.035944
+               43.964472
+               43.964472
+            
+         
+         
+            Ontario_Cobourg3553
+            
+               -78.033333
+               -78.033333
+               43.959306
+               43.959306
+            
+         
+         
+            Ontario_Cobourg3554
+            
+               -78.030944
+               -78.030944
+               43.950222
+               43.950222
+            
+         
+         
+            Ontario_Cobourg1037
+            
+               -78.02678
+               -78.02678
+               43.93526
+               43.93526
+            
+         
+         
+            Ontario_TorontoEast3787
+            
+               -79.15379
+               -79.15379
+               43.75712
+               43.75712
+            
+         
+         
+            Ontario_TorontoEast3788
+            
+               -79.15176
+               -79.15176
+               43.75312
+               43.75312
+            
+         
+         
+            Ontario_TorontoEast3783
+            
+               -79.18433
+               -79.18433
+               43.73416
+               43.73416
+            
+         
+         
+            Ontario_TorontoEast3784
+            
+               -79.17081
+               -79.17081
+               43.72525
+               43.72525
+            
+         
+         
+            Ontario_TorontoEast1035
+            
+               -79.16126
+               -79.16126
+               43.71398
+               43.71398
+            
+         
+         
+            Ontario_Oakville3988
+            
+               -79.66011
+               -79.66011
+               43.44664
+               43.44664
+            
+         
+         
+            Ontario_Oakville3989
+            
+               -79.65693
+               -79.65693
+               43.44408
+               43.44408
+            
+         
+         
+            Ontario_Oakville3990
+            
+               -79.65495
+               -79.65495
+               43.44318
+               43.44318
+            
+         
+         
+            Ontario_Oakville3991
+            
+               -79.64531
+               -79.64531
+               43.43762
+               43.43762
+            
+         
+         
+            Ontario_Oakville1036
+            
+               -79.63846
+               -79.63846
+               43.43336
+               43.43336
+            
+         
+         
+            Huron_GBNawash
+            
+               -81.06582
+               -81.06582
+               44.92928486
+               44.92928486
+            
+         
+         
+            Huron_GrandBend
+            
+               -81.83008
+               -81.83008
+               43.294027
+               43.294027
+            
+         
+         
+            Huron_StokesBayOS
+            
+               -81.487833
+               -81.487833
+               44.978056
+               44.978056
+            
+         
+         
+            Huron_GBPointeAuxBaril
+            
+               -80.42815833
+               -80.42815833
+               45.54181389
+               45.54181389
+            
+         
+         
+            Huron_GBFrenchRiiver
+            
+               -80.91611111
+               -80.91611111
+               45.91325
+               45.91325
+            
+         
+         
+            Huron_GBParrySound3
+            
+               -80.28163889
+               -80.28163889
+               45.33686111
+               45.33686111
+            
+         
+         
+            Huron_GBParrySound1
+            
+               -80.0646
+               -80.0646
+               45.33987
+               45.33987
+            
+         
+         
+            Huron_GBMoonIsland
+            
+               -80.08883333
+               -80.08883333
+               45.13411111
+               45.13411111
+            
+         
+         
+            Huron_GBGoHomeBay
+            
+               -79.97400278
+               -79.97400278
+               44.98462778
+               44.98462778
+            
+         
+         
+            Huron_GBSevernSound
+            
+               -79.85036111
+               -79.85036111
+               44.78897222
+               44.78897222
+            
+         
+         
+            Huron_GBNottawasagaBay
+            
+               -80.07109444
+               -80.07109444
+               44.60302778
+               44.60302778
+            
+         
+         
+            Huron_GBCollingwood
+            
+               -80.24944444
+               -80.24944444
+               44.55247222
+               44.55247222
+            
+         
+         
+            Huron_GBOwenSound
+            
+               -80.92697222
+               -80.92697222
+               44.60308333
+               44.60308333
+            
+         
+         
+            Huron_GBColpoysBay
+            
+               -80.98847222
+               -80.98847222
+               44.83461111
+               44.83461111
+            
+         
+         
+            Huron_Tobermory
+            
+               -81.69990833
+               -81.69990833
+               45.29988889
+               45.29988889
+            
+         
+         
+            Huron_SouthBay
+            
+               -82.00472222
+               -82.00472222
+               45.57527778
+               45.57527778
+            
+         
+         
+            Huron_StokesBay
+            
+               -81.41005556
+               -81.41005556
+               44.97041667
+               44.97041667
+            
+         
+         
+            Huron_SouthHampton
+            
+               -81.38252778
+               -81.38252778
+               44.51416667
+               44.51416667
+            
+         
+         
+            Huron_Kincardine
+            
+               -81.71614444
+               -81.71614444
+               44.18355556
+               44.18355556
+            
+         
+         
+            Huron_Goderich
+            
+               -81.73805556
+               -81.73805556
+               43.74916667
+               43.74916667
+            
+         
+         
+            Huron_CapeIpperwash
+            
+               -82.02391667
+               -82.02391667
+               43.25775
+               43.25775
+            
+         
+         
+            Huron_GBParrySound2
+            
+               -80.06083333
+               -80.06083333
+               45.33611111
+               45.33611111
+            
+         
+         
+            Huron_SaubleBeachSmith39
+            
+               -81.3789
+               -81.3789
+               44.65722
+               44.65722
+            
+         
+         
+            Huron_LittlePikeBayOSSmith40
+            
+               -81.4372
+               -81.4372
+               44.89889
+               44.89889
+            
+         
+         
+            Huron_AlpenaOSSmith44
+            
+               -82.6844
+               -82.6844
+               45.01694
+               45.01694
+            
+         
+         
+            Huron_MackinacStraitsSmith64
+            
+               -84.755
+               -84.755
+               45.81333
+               45.81333
+            
+         
+         
+            Huron_MackinacIslandSmith65
+            
+               -84.5667
+               -84.5667
+               45.845
+               45.845
+            
+         
+         
+            Huron_MarquetteIslandOSSmith66
+            
+               -84.2985
+               -84.2985
+               45.86306
+               45.86306
+            
+         
+         
+            Huron_SaginawBay2Smith96
+            
+               -83.1714
+               -83.1714
+               44.12639
+               44.12639
+            
+         
+         
+            Ontario_NorthChannel
+            
+               -76.73514
+               -76.73514
+               44.18069
+               44.18069
+            
+         
+         
+            Ontario_SLRLakeStFrancis
+            
+               -74.41608
+               -74.41608
+               45.13672
+               45.13672
+            
+         
+         
+            Ontario_SLRPrescott
+            
+               -75.5315
+               -75.5315
+               44.69839
+               44.69839
+            
+         
+         
+            Ontario_SixMileCreek
+            
+               -78.97853
+               -78.97853
+               43.31986
+               43.31986
+            
+         
+         
+            Ontario_HHHamilton
+            
+               -79.83625
+               -79.83625
+               43.28881
+               43.28881
+            
+         
+         
+            Ontario_SLRMcDonnellBay
+            
+               -76.37458
+               -76.37458
+               44.23428
+               44.23428
+            
+         
+         
+            Ontario_BoQTrenton
+            
+               -77.54383
+               -77.54383
+               44.08831
+               44.08831
+            
+         
+         
+            Ontario_Pickering
+            
+               -79.08501
+               -79.08501
+               43.79361
+               43.79361
+            
+         
+         
+            Ontario_PortCredit
+            
+               -79.569
+               -79.569
+               43.54230556
+               43.54230556
+            
+         
+         
+            Ontario_TorontoHarbour
+            
+               -79.36994
+               -79.36994
+               43.63158
+               43.63158
+            
+         
+         
+            Ontario_HumberBay
+            
+               -79.44681
+               -79.44681
+               43.62331
+               43.62331
+            
+         
+         
+            Ontario_Presquile
+            
+               -77.70864
+               -77.70864
+               44.01517
+               44.01517
+            
+         
+         
+            Ontario_PortDalhousie
+            
+               -79.28328
+               -79.28328
+               43.22772
+               43.22772
+            
+         
+         
+            Ontario_StoneyCreek
+            
+               -79.67111
+               -79.67111
+               43.26819
+               43.26819
+            
+         
+         
+            Ontario_PrinceEdwardCounty
+            
+               -76.81168767
+               -76.81168767
+               43.95791518
+               43.95791518
+            
+         
+         
+            Ontario_Etobicoke
+            
+               -79.51594
+               -79.51594
+               43.57272
+               43.57272
+            
+         
+         
+            Ontario_Cobourg
+            
+               -78.01236
+               -78.01236
+               43.95333
+               43.95333
+            
+         
+         
+            Ontario_NewCastle
+            
+               -78.56128
+               -78.56128
+               43.88019
+               43.88019
+            
+         
+         
+            Ontario_Oakville
+            
+               -79.66067
+               -79.66067
+               43.42581
+               43.42581
+            
+         
+         
+            Erie_SCRStClairRiver
+            
+               -82.45747
+               -82.45747
+               42.89728
+               42.89728
+            
+         
+         
+            Erie_DRFightingIsland
+            
+               -83.10875
+               -83.10875
+               42.19772
+               42.19772
+            
+         
+         
+            Erie_SCRLakeStClairEast
+            
+               -82.43261
+               -82.43261
+               42.37256
+               42.37256
+            
+         
+         
+            Erie_SCRLakeStClairUpper
+            
+               -82.70256
+               -82.70256
+               42.50158
+               42.50158
+            
+         
+         
+            Erie_SCRStClairRiver-IA
+            
+               -82.46633
+               -82.46633
+               42.86336
+               42.86336
+            
+         
+         
+            Erie_GrandRiverRiver
+            
+               -79.57161
+               -79.57161
+               42.87172
+               42.87172
+            
+         
+         
+            Erie_Leamington
+            
+               -82.55986
+               -82.55986
+               41.96694
+               41.96694
+            
+         
+         
+            Erie_WesternBasin
+            
+               -83.09631
+               -83.09631
+               41.85681
+               41.85681
+            
+         
+         
+            Erie_PortCrewe
+            
+               -82.14869444
+               -82.14869444
+               42.16366667
+               42.16366667
+            
+         
+         
+            Erie_GrandRiverLake
+            
+               -79.58994
+               -79.58994
+               42.84067
+               42.84067
+            
+         
+         
+            Erie_Nanticoke
+            
+               -79.98236
+               -79.98236
+               42.77497
+               42.77497
+            
+         
+         
+            Erie_PortStanley
+            
+               -81.18553
+               -81.18553
+               42.63772
+               42.63772
+            
+         
+         
+            Erie_PointeAuxPins
+            
+               -81.82817
+               -81.82817
+               42.28197
+               42.28197
+            
+         
+         
+            Erie_FortErie
+            
+               -78.93039
+               -78.93039
+               42.87186
+               42.87186
+            
+         
+         
+            Erie_LongPointBay
+            
+               -80.28483
+               -80.28483
+               42.65319
+               42.65319
+            
+         
+         
+            Erie_Colchester
+            
+               -82.96119
+               -82.96119
+               41.96831
+               41.96831
+            
+         
+         
+            Erie_PortGlasgow
+            
+               -81.63875
+               -81.63875
+               42.40478
+               42.40478
+            
+         
+         
+            Superior_BigTroutBay
+            
+               -89.47153
+               -89.47153
+               48.05208
+               48.05208
+            
+         
+         
+            Superior_NCSpanishHarbour
+            
+               -82.39219
+               -82.39219
+               46.17331
+               46.17331
+            
+         
+         
+            Superior_SMRStMarysRiver
+            
+               -84.4656
+               -84.4656
+               46.49371
+               46.49371
+            
+         
+         
+            Superior_SMRStJosephChannel
+            
+               -84.03491
+               -84.03491
+               46.30029
+               46.30029
+            
+         
+         
+            Superior_SMRLakeStGeorge
+            
+               -84.11642
+               -84.11642
+               46.48628
+               46.48628
+            
+         
+         
+            Superior_FlatlandIsland
+            
+               -89.26347
+               -89.26347
+               48.212
+               48.212
+            
+         
+         
+            Superior_WelcomeIsland
+            
+               -89.15592
+               -89.15592
+               48.36693
+               48.36693
+            
+         
+         
+            Superior_SturgeonBay
+            
+               -88.44633
+               -88.44633
+               48.52814
+               48.52814
+            
+         
+         
+            Superior_NipigonBay
+            
+               -88.19569
+               -88.19569
+               48.93062
+               48.93062
+            
+         
+         
+            Superior_Rossport
+            
+               -87.51789
+               -87.51789
+               48.82984
+               48.82984
+            
+         
+         
+            Superior_JackfishBay
+            
+               -86.98494
+               -86.98494
+               48.80288
+               48.80288
+            
+         
+         
+            Superior_PeninsulaHarbour
+            
+               -86.41709
+               -86.41709
+               48.74563
+               48.74563
+            
+         
+         
+            Superior_WarpBay
+            
+               -85.00761
+               -85.00761
+               47.58464
+               47.58464
+            
+         
+         
+            Superior_GoulaisBay
+            
+               -84.48648
+               -84.48648
+               46.71935
+               46.71935
+            
+         
+         
+            Superior_NCNorthChannel
+            
+               -82.28664
+               -82.28664
+               46.09856
+               46.09856
+            
+         
+         
+            Superior_MichipicotenRiver
+            
+               -84.85644
+               -84.85644
+               47.94232
+               47.94232
+            
+         
+         
+            Superior_OtterHead
+            
+               -86.03397
+               -86.03397
+               48.10158
+               48.10158
+            
+         
+         
+            Superior_BlackBay
+            
+               -88.52294444
+               -88.52294444
+               48.60161111
+               48.60161111
+            
+         
+         
+            Superior_OuterNipigonBay
+            
+               -87.95313889
+               -87.95313889
+               48.87127778
+               48.87127778
+            
+         
+         
+            Superior_McKellarHarbour
+            
+               -86.70594444
+               -86.70594444
+               48.80130556
+               48.80130556
+            
+         
+         
+            Erie_37
+            
+               -81.58
+               -81.58
+               42.11
+               42.11
+            
+         
+         
+            Huron_54M
+            
+               -83.416
+               -83.416
+               45.516
+               45.516
+            
+         
+         
+            Michigan_40
+            
+               -86.966
+               -86.966
+               44.759
+               44.759
+            
+         
+         
+            Ontario_49
+            
+               -77.438
+               -77.438
+               43.772
+               43.772
+            
+         
+         
+            Superior_05
+            
+               -86.55567
+               -86.55567
+               46.77483
+               46.77483
+            
+         
+         
+            
+               
+                  1999-08-18
+               
+               
+                  2022-11-15
+               
+            
+         
+      
+      
+         ongoing
+      
+      
+         Nicole Berry
+         U.S. Geological Survey Great Lakes Science Center
+         nberry@usgs.gov
+         https://orcid.org/0000-0002-7889-197X
+      
+      
+         Environmental Data Initiative
+         info@edirepository.org
+         https://edirepository.org
+         0330j0z60
+      
+      Environmental Data Initiative
+      
+         
+            
+               Since 1999, water transparency data have been collected on the Laurentian Great Lakes and water bodies in the Great Lakes region during the ice-free season. The frequency of this sampling ranges from a single sample for a given site to multiple samples within a year for a site, as the collection of these samples has been a collaborative effort among multiple research groups. Light profiles were collected in the water column of the lakes using PUV-2500 radiometers (Biospherical Instruments) or OCI-200 (Satlantic) instruments, and calculations were performed post-data collection. Method details, including specific instrument used, can be found in the Methods_GreatLakes table, which is tied to the Data_GreatLakes table by the MethodID column.
+
+            
+         
+         
+            This provenance metadata does not contain entity specific information.
+            
+               Ontario Ministry: Environment, Conservation, and Parks Data Catalogue
+               
+                  Todd Howell
+                  Ontario Ministry of the Environment, Conservation, and Parks
+                  todd.howell@proton.me
+               
+               
+                  
+                     Data are collected each year, according to the lake-by-lake cycle. Water chemistry, sediment chemistry, and benthic invertebrate composition data are available for the Great Lakes Nearshore Area.
+                     https://data.ontario.ca/organization/environment-conservation-and-parks?keywords_en=Great+Lakes+Nearshore
+                  
+               
+               
+                  Todd Howell
+                  Ontario Ministry of the Environment, Conservation, and Parks
+                  todd.howell@proton.me
+               
+            
+         
+         
+            This provenance metadata does not contain entity specific information.
+            
+               Smith et al 2004
+               
+                  Ralph Smith
+                  University of Waterloo
+                  rsmith@uwaterloo.ca
+               
+               
+                  
+                     Lake Huron 1999 data are published in this manuscript
+                     https://doi.org/10.1016/S0380-1330(04)70354-8
+                  
+               
+               
+                  Ralph Smith
+                  University of Waterloo
+                  rsmith@uwaterloo.ca
+               
+            
+         
+         
+            This provenance metadata does not contain entity specific information.
+            
+               Lepak et al. 2018
+               
+                  Ryan Lepak
+                  U.S. Environmental Protection Agency
+                  lepak.ryan@epa.gov
+               
+               
+                  
+                     This manuscript data from 2011 from each of the Laurentian Great Lakes
+                     https://doi.org/10.1021/acs.est.7b06120
+                  
+               
+               
+                  Ryan Lepak
+                  U.S. Environmental Protection Agency
+                  lepak.ryan@epa.gov
+               
+            
+         
+      
+      
+         Identifying an emerging Lake Whitefish restoration barrier in the Great Lakes: habitat-mediated exposure to ultraviolet radiation
+         
+            Craig Williamson
+            Miami University
+            willia85@miamioh.edu
+            https://orcid.org/0000-0001-7350-1912
+            Principal Investigator
+         
+         U.S. Fish and Wildlife F22AP02900
+         
+            Quantifying the Importance of Multiple Nursery Habitats to Alewife Population Recruitment and Population Resilience
+            
+               Craig Williamson
+               Miami University
+               willia85@miamioh.edu
+               https://orcid.org/0000-0001-7350-1912
+               Principal Investigator
+            
+            Great Lakes Fisheries Trust 2019.1806
+         
+         
+            OPUS: CRS Synthesis to add dissolved organic matter to the trophic paradigm: the importance of water transparency in structuring pelagic ecosystems
+            
+               Craig Williamson
+               Miami University
+               willia85@miamioh.edu
+               https://orcid.org/0000-0001-7350-1912
+               Principal Investigator
+            
+            National Science Foundation NSF DEB-1950170
+         
+         
+            Collaborative LTREB Proposal: Will increases in dissolved organic matter accelerate a shift in trophic status through anoxia-driven positive feedbacks in an oligotrophic lake?
+            
+               Craig Williamson
+               Miami University
+               willia85@miamioh.edu
+               https://orcid.org/0000-0001-7350-1912
+               Principal Investigator
+            
+            National Science Foundation NSF DEB-1754276
+         
+         
+            Ohio Eminent Scholar in Ecosystem Ecology
+            
+               Craig Williamson
+               Miami University
+               willia85@miamioh.edu
+               https://orcid.org/0000-0001-7350-1912
+               Principal Investigator
+            
+            Miami University
+         
+         
+            Dissertation: Does ultraviolet radiation have the potential to influence the early life stages of Great Lakes fish?
+            
+               Nicole Berry
+               Miami University
+               nberry@usgs.gov
+               https://orcid.org/0000-0002-7889-197X
+               Principal Investigator
+            
+            Miami University
+         
+         
+            Evaluating how changing climate and water clarity can affect restoration of native coregonines in midwestern lakes
+            
+               David Bunnell
+               U.S. Geological Survey Great Lakes Science Center
+               dbunnell@usgs.gov
+               https://orcid.org/0000-0003-3521-7747
+               Principal Investigator
+            
+            U.S. Geological Survey Midwest Climate Adaptation Science Center G21AC10726 (2021)
+         
+         
+            Environmental control of primary production in large lakes, NSERC Discovery Grant Program, R. Smith
+            
+               Ralph Smith
+               University of Waterloo
+               rsmith@uwaterloo.ca
+               Principal Investigator
+            
+            NSERC Discovery Grant
+         
+      
+      
+         Great Lakes Data
+         Limnological data from the Great Lakes, with a focus on UV transparency
+         
+            Data_GreatLakes.csv
+            1332677
+            c4d01d9db28f50965884b574b2577627
+            
+               
+                  1
+                  \r\n
+                  column
+                  
+                     ,
+                     "
+                  
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/edi/1321/6/a451c8f79383e1b31ec979e4717b0023
+               
+            
+         
+         
+            
+               SiteID
+               Unique code given to each lake. Can be used as a foreign key to tie Data_GreatLakes and SiteInformation_GreatLakes tables.
+               string
+               
+                  
+                     
+                        
+                           
+                              Site1055
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1056
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1057
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1058
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1059
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1060
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1061
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1062
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1063
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1064
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1065
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1066
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1067
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1068
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1069
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1070
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1071
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site1074
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site569
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site570
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site571
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site572
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site573
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site574
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site575
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site576
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site577
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site578
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site579
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site580
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site581
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site582
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site583
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site584
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site585
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site586
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site587
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site589
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site590
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site591
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site592
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site593
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site594
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site595
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site596
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site597
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site598
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site599
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site600
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site601
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site602
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site605
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site606
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site608
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site609
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site610
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site611
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site612
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site613
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site614
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site615
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site616
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site617
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site619
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site620
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site621
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site622
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site623
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site624
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site625
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site626
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site627
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site628
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site629
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site630
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site631
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site632
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site633
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site634
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site635
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site636
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site637
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site638
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site639
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site640
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site641
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site642
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site643
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site644
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site645
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site646
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site647
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site648
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site649
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site650
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site651
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site652
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site653
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site654
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site655
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site669
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site670
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site671
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site672
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                           
+                              Site673
+                              A unique ID was given to each site. This ID can be used as a foreign key to tie the Data_GreatLakes table to the SiteInformation_GreatLakes table.
+                           
+                        
+                     
+                  
+               
+            
+            
+               Site
+               Common name given to each sampling location. Site names typically begin with the name of the major lake followed by a name or number specifying a site within the lake.
+               string
+               
+                  
+                     
+                        
+                           
+                              Erie_37
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_Colchester
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_DRFightingIsland
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_FortErie
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_GrandRiverLake
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_GrandRiverRiver
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_Leamington
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_LongPointBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_Nanticoke
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_PointeAuxPins
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_PortCrewe
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_PortGlasgow
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_PortStanley
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_SCRLakeStClairEast
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_SCRLakeStClairUpper
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_SCRStClairRiver
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_SCRStClairRiver-IA
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Erie_WesternBasin
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_54M
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_AlpenaOSSmith44
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_CapeIpperwash
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBCollingwood
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBColpoysBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBFrenchRiiver
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBGoHomeBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBMoonIsland
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBNawash
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBNottawasagaBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBOwenSound
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBParrySound1
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBParrySound2
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBParrySound3
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBPointeAuxBaril
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GBSevernSound
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_Goderich
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_GrandBend
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_Kincardine
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_LittlePikeBayOSSmith40
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_MackinacIslandSmith65
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_MackinacStraitsSmith64
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_MarquetteIslandOSSmith66
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_SaginawBay2Smith96
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_SaubleBeachSmith39
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_SouthBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_SouthHampton
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_StokesBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_StokesBayOS
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Huron_Tobermory
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Michigan_40
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_49
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_BoQTrenton
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Cobourg
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Cobourg1037
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Cobourg3552
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Cobourg3553
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Cobourg3554
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Cobourg3555
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Etobicoke
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_HHHamilton
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_HumberBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_NewCastle
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_NorthChannel
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Oakville
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Oakville1036
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Oakville3988
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Oakville3989
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Oakville3990
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Oakville3991
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Pickering
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_PortCredit
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_PortDalhousie
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_Presquile
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_PrinceEdwardCounty
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_SLRLakeStFrancis
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_SLRMcDonnellBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_SLRPrescott
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_SixMileCreek
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_StoneyCreek
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_TorontoEast1035
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_TorontoEast3783
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_TorontoEast3784
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_TorontoEast3787
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_TorontoEast3788
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Ontario_TorontoHarbour
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_05
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_BigTroutBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_BlackBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_FlatlandIsland
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_GoulaisBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_JackfishBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_McKellarHarbour
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_MichipicotenRiver
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_NCNorthChannel
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_NCSpanishHarbour
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_NipigonBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_OtterHead
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_OuterNipigonBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_PeninsulaHarbour
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_Rossport
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_SMRLakeStGeorge
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_SMRStJosephChannel
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_SMRStMarysRiver
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_SturgeonBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_WarpBay
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                           
+                              Superior_WelcomeIsland
+                              Common name given to the site at which the sample was taken. Site names generally begin with the name of the lake, followed by a name and/or number denoting a site within the lake.
+                           
+                        
+                     
+                  
+               
+            
+            
+               Date
+               Local date and time when sample was collected. Note that for time of 00:00 sample collection time was not recorded, but was during daylight hours.
+               date
+               
+                  
+                     YYYY-MM-DD hh:mm
+                     
+                  
+               
+            
+            
+               Depth
+               Depth below the surface of the lake at which data were collected
+               float
+               
+                  
+                     
+                        meter
+                     
+                     
+                        real
+                        
+                           0.5
+                           2
+                        
+                     
+                  
+               
+               
+                  NAN
+                  No depth is associated with this sample
+               
+            
+            
+               Variable
+               Variable measured. Variables are defined in Variables_GreatLakes table. This column can be used as a foreign key to tie to the Variables_GreatLakes table.
+               string
+               
+                  
+                     
+                        
+                           
+                              Kd305
+                              Diffuse attenuation coefficient of light at 305 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd313
+                              Diffuse attenuation coefficient of light at 313 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd320
+                              Diffuse attenuation coefficient of light at 320 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd325
+                              Diffuse attenuation coefficient of light at 325 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd340
+                              Diffuse attenuation coefficient of light at 340 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd380
+                              Diffuse attenuation coefficient of light at 380 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd395
+                              Diffuse attenuation coefficient of light at 395 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd443
+                              Diffuse attenuation coefficient of light at 443 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd491
+                              Diffuse attenuation coefficient of light at 491 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              Kd554
+                              Diffuse attenuation coefficient of light at 554 nm measured in situ with a profiling radiometer.
+                           
+                           
+                              KdPAR
+                              Diffuse attenuation coefficient of PAR (photosyntheically active radiation, 400-700 nm) measured in situ with a profiling radiometer.
+                           
+                           
+                              max.depth
+                              Maximum depth of site.
+                           
+                           
+                              ss.10pc.305
+                              Depth at which 305 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.313
+                              Depth at which 313 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.320
+                              Depth at which 320 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.325
+                              Depth at which 325 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.340
+                              Depth at which 340 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.380
+                              Depth at which 380 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.395
+                              Depth at which 395 nm radiation is 10 percent of subsurface value.
+                           
+                           
+                              ss.10pc.par
+                              Depth at which PAR (photosyntheically active radiation, 400-700 nm) is 10 percent of subsurface value.
+                           
+                           
+                              ss.1pc.305
+                              Depth at which 305 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.313
+                              Depth at which 313 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.320
+                              Depth at which 320 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.325
+                              Depth at which 325 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.340
+                              Depth at which 340 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.380
+                              Depth at which 380 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.395
+                              Depth at which 395 nm radiation is 1 percent of subsurface value.
+                           
+                           
+                              ss.1pc.par
+                              Depth at which PAR (photosyntheically active radiation, 400-700 nm) is 1 percent of subsurface value.
+                           
+                           
+                              temp0.5m
+                              Water temperature, measured at 0.5 meters below the surface of the lake.
+                           
+                           
+                              temp2m
+                              Water temperature, measured at 2 meters below the surface of the lake.
+                           
+                        
+                     
+                  
+               
+            
+            
+               Value
+               Data value. Units are defined in the Variables_GreatLakes table
+               float
+               
+                  
+                     
+                        dimensionless
+                     
+                     
+                        real
+                        
+                           0.03
+                           32.08
+                        
+                     
+                  
+               
+            
+            
+               MethodID
+               ID number given to each method by which measurements were taken. See Methods_GreatLakes table for details on each MethodID. Can be used as a foreign key to tie Data_GreatLakes and Methods_GreatLakes tables.
+               string
+               
+                  
+                     
+                        
+                           
+                              Method166
+                              Method by which sample was processed. See Methods_GreatLakes table for details on this method. To be used as a foreign key to link Data_GreatLakes and Methods_GreatLakes tables.
+                           
+                           
+                              Method167
+                              Method by which sample was processed. See Methods_GreatLakes table for details on this method. To be used as a foreign key to link Data_GreatLakes and Methods_GreatLakes tables.
+                           
+                        
+                     
+                  
+               
+            
+         
+         17969
+      
+      
+         Methods
+         Sampling and analytical method details
+         
+            Methods_GreatLakes.csv
+            184
+            6763fe2b35ea76a3e8f40a5b3e8b197e
+            
+               
+                  1
+                  \r\n
+                  column
+                  
+                     ,
+                     "
+                  
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/edi/1321/6/20c51b5f4e9aeb5334c90ff072e6f928
+               
+            
+         
+         
+            
+               MethodID
+               ID given to each method used to collect or process the samples. This unique ID can be used as a primary key to tie the Methods_GreatLakes and Data_GreatLakes tables.
+               string
+               
+                  
+                     
+                        
+                           ID given to each method used to collect or process the samples. This unique ID can be used as a primary key to tie the Methods_GreatLakes and Data_GreatLakes tables.
+                        
+                     
+                  
+               
+            
+            
+               MethodDetails
+               Details on each method
+               string
+               
+                  
+                     
+                        
+                           Details on each method
+                        
+                     
+                  
+               
+            
+         
+         2
+      
+      
+         Sampling Sites
+         Sampling site descriptions
+         
+            SiteInformation_GreatLakes.csv
+            5994
+            a9c7660ad22a524714ce7e23f4c0d538
+            
+               
+                  1
+                  \r\n
+                  column
+                  
+                     ,
+                     "
+                  
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/edi/1321/6/87c390495ad405e705c09e62ac6f58f0
+               
+            
+         
+         
+            
+               SiteID
+               Unique code given to each lake. Can be used as a primary key to tie Data_GreatLakes and SiteInformation_GreatLakes tables.
+               string
+               
+                  
+                     
+                        
+                           Unique code given to each lake. Can be used as a primary key to tie Data_GreatLakes and SiteInformation_GreatLakes tables.
+                        
+                     
+                  
+               
+            
+            
+               Site
+               Common name given to each sampling location. Site names typically begin with the name of the major lake followed by a name or number specifying a site within the lake.
+               string
+               
+                  
+                     
+                        
+                           Common name given to each sampling location. Site names typically begin with the name of the major lake followed by a name or number specifying a site within the lake.
+                        
+                     
+                  
+               
+            
+            
+               LakeName
+               Name of the lake from which data were measured
+               string
+               
+                  
+                     
+                        
+                           
+                              Erie
+                              Measurement was taken in Lake Erie
+                           
+                           
+                              Huron
+                              Measurement was taken in Lake Huron
+                           
+                           
+                              Michigan
+                              Measurement was taken in Lake Michigan
+                           
+                           
+                              Ontario
+                              Measurement was taken in Lake Ontario
+                           
+                           
+                              Superior
+                              Measurement was taken in Lake Superior
+                           
+                        
+                     
+                  
+               
+            
+            
+               Latitude
+               Latitude of sampling site
+               float
+               
+                  
+                     
+                        degree
+                     
+                     
+                        real
+                        
+                           41.85681
+                           48.93062
+                        
+                     
+                  
+               
+            
+            
+               Longitude
+               Longitude of sampling site
+               float
+               
+                  
+                     
+                        degree
+                     
+                     
+                        real
+                        
+                           -89.47153
+                           -74.41608
+                        
+                     
+                  
+               
+            
+         
+         105
+      
+      
+         Variable Definitions
+         Description of variables for which data were collected
+         
+            Variables_GreatLakes.csv
+            3619
+            d9cbc9995d4e2dc568c812663646238d
+            
+               
+                  1
+                  \r\n
+                  column
+                  
+                     ,
+                     "
+                  
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/edi/1321/6/0dd2a1bd6bc3c5dd4beff176f80da8bb
+               
+            
+         
+         
+            
+               Variable
+               Variable measured. Entries in this column can be used as a primary key to line up with entries in the Variables column of the Data_GreatLakes table.
+               string
+               
+                  
+                     
+                        
+                           Variable measured. Entries in this column can be used as a primary key to line up with entries in the Variables column of the Data_GreatLakes table.
+                        
+                     
+                  
+               
+            
+            
+               Unit
+               Units in which data were measured
+               string
+               
+                  
+                     
+                        
+                           
+                              Meters
+                              Unit in which data value is reported. Meter.
+                           
+                           
+                              perMeter
+                              Unit in which data value is reported. Per Meter.
+                           
+                        
+                     
+                  
+               
+            
+            
+               Definition
+               Description of variable for which data were measured
+               string
+               
+                  
+                     
+                        
+                           Description of variable for which data were measured
+                        
+                     
+                  
+               
+            
+         
+         30
+      
+      
+         U.S. Geological Survey Metadata file
+         U.S. Geological Survey's metadata file for this data set
+         
+            MetaData_Berry-IP165376.xml
+            40466
+            f5c2f14f10bcfd0756493cc7168312a3
+            
+               
+                  application/xml
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/edi/1321/6/a4cfac7b7a3d09de52062ada8a3a6cad
+               
+            
+         
+         unknown
+      
+   
+   
+      
+         
+            EMLassemblyline
+            3.5.5
+         
+      
+   
