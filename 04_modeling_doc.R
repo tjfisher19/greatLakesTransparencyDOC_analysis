@@ -180,5 +180,5 @@ ggplot(DOCdata_pred) +
   #scale_linewidth_manual(values=c(0.65, 0.75, 1, 1)) +
   theme(legend.key.width = unit(2, 'cm'))
 
-ggsave(filename="plots/pred_doclevels_trend.png", width=8, height=2.5)
+ggsave(filename="plots/pred_doclevels_trend.png", width=8, height=2.95)
 

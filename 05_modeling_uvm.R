@@ -184,5 +184,5 @@ ggplot() +
        subtitle="Points correspond to observed data") +
   theme(legend.key.width = unit(1, 'cm'))
 
-ggsave(filename="plots/pred_UVlevels_DOC.png", width=8, height=2.5)
+ggsave(filename="plots/pred_UVlevels_DOC.png", width=8, height=2.95)
 
