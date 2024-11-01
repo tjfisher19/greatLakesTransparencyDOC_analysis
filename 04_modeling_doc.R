@@ -87,7 +87,7 @@ doc.lmer <- lmer(log10(DOC) ~ Year + WaterBody + Season +  Season:WaterBody +
 anova(doc.lmer)
 summary(doc.lmer)
 BIC(doc.lmer)
-
+doc_back_bic$BEST_AIC
 
 ## A quick residuals analysis
 plot(fitted(doc.lmer), residuals(doc.lmer))
@@ -156,8 +156,9 @@ our_colors = c("#cd5a53",
                "#cd5a53",
                "#2eb5ce",
                "#2eb5ce")
+
 ggplot(DOCdata_pred) + 
-  #geom_point(data=UVdata, alpha=0.4, size=0.95, aes(x=Date, y=ss.1pc.estimate, color=Season) ) +       ## Add data?
+  geom_point(data=UVdata, alpha=0.3, size=0.95, aes(x=Date, y=ss.1pc.estimate, color=WaterBody) ) +       ## Add data?
   #geom_ribbon(aes(x=YearPlot, ymin=Lo, ymax=Hi, fill=Season, group=Season), alpha=0.2) +               ## Ribbons -- too busy?
   #geom_errorbar(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=0.35, show.legend=FALSE ) + ## Error bars -- maybe better?
   #geom_linerange(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=3, alpha=0.4 ) +           ## Another version of error bars
@@ -179,5 +180,5 @@ ggplot(DOCdata_pred) +
   #scale_linewidth_manual(values=c(0.65, 0.75, 1, 1)) +
   theme(legend.key.width = unit(2, 'cm'))
 
-
+ggsave(filename="plots/pred_doclevels_trend.png", width=8, height=2.5)
 
