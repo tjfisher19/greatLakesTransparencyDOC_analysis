@@ -27,46 +27,46 @@ load("fully_processed_data.RData")
 source("stepwise_lmer_code.R")
 
 ### Backward selection
-par_back_aic <- lmerStepBackward(data=PARdata,
-                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                 random.formula = "(1 | SiteID)",
-                                 criteria = "AIC")
-par_back_mdl <- lmerStepBackward(data=PARdata,
-                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                 random.formula = "(1 | SiteID)",
-                                 criteria = "MDL")
+# par_back_aic <- lmerStepBackward(data=PARdata,
+#                                  fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                  random.formula = "(1 | SiteID)",
+#                                  criteria = "AIC")
+# par_back_mdl <- lmerStepBackward(data=PARdata,
+#                                  fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                  random.formula = "(1 | SiteID)",
+#                                  criteria = "MDL")
 par_back_bic <- lmerStepBackward(data=PARdata,
                                  fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
                                  random.formula = "(1 | SiteID)",
                                  criteria = "BIC")
 
 ### Forward selection
-par_forw_aic <- lmerStepForward(data=PARdata,
-                                fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "AIC")
-par_forw_mdl <- lmerStepForward(data=PARdata,
-                                fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "MDL")
-par_forw_bic <- lmerStepForward(data=PARdata,
-                                fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "BIC")
+# par_forw_aic <- lmerStepForward(data=PARdata,
+#                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "AIC")
+# par_forw_mdl <- lmerStepForward(data=PARdata,
+#                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "MDL")
+# par_forw_bic <- lmerStepForward(data=PARdata,
+#                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "BIC")
 
-save(par_back_aic, par_back_mdl, par_back_bic,
-     par_forw_aic, par_forw_mdl, par_forw_bic,
-     file="modelSelectionFits_par.RData")
-
-load("modelSelectionFits_par.RData")
-
-par_back_aic$BEST_FIXED_TERMS
-par_back_mdl$BEST_FIXED_TERMS
-par_back_bic$BEST_FIXED_TERMS
-
-par_forw_aic$BEST_FIXED_TERMS
-par_forw_mdl$BEST_FIXED_TERMS
-par_forw_bic$BEST_FIXED_TERMS
+# save(par_back_aic, par_back_mdl, par_back_bic,
+#      par_forw_aic, par_forw_mdl, par_forw_bic,
+#      file="modelSelectionFits_par.RData")
+# 
+# load("modelSelectionFits_par.RData")
+# 
+# par_back_aic$BEST_FIXED_TERMS
+# par_back_mdl$BEST_FIXED_TERMS
+# par_back_bic$BEST_FIXED_TERMS
+# 
+# par_forw_aic$BEST_FIXED_TERMS
+# par_forw_mdl$BEST_FIXED_TERMS
+# par_forw_bic$BEST_FIXED_TERMS
 
 
 
@@ -76,7 +76,7 @@ par_forw_bic$BEST_FIXED_TERMS
 ## Using backward selection with BIC
 
 par_back_bic$BEST_FIXED_TERMS
-
+par_back_bic$BEST_AIC
 par.lmer <- lmer(log10(ss.1pc.estimate) ~ Lake + Season + log10(DOC) + WaterBody + log10(DOC)*WaterBody + 
                         (1|SiteID), data=PARdata)  
 BIC(par.lmer)
@@ -101,14 +101,16 @@ contrast(emmeans(par.lmer, ~ Season ), "pairwise" )
 ##    Spring & Summer technically not different.
 
 
-emmip(par.lmer, WaterBody ~ log10(DOC), cov.reduce = range)
+emmip(par.lmer, WaterBody ~ log10(DOC), cov.reduce = range, CIs = TRUE)
 ## Clearly not parallel, so 
 ##   the interaction is very strong.
 emmeans(par.lmer, ~ log10(DOC) | WaterBody)
-## In Embayment, the trend on log10(DOC) is
-##    between 0.981 and 1.07
-## In Open Waters, a stronger trend between
-##    1.082 and 1.17
+## In Embayment, the a one unit increase in log10(DOC) is
+##  results in 1.03 increase in log10(PAR)
+##    CI: between 0.982 and 1.07
+## In Open Waters, a stronger trend 
+##    with 1.13 log10(PAR) for every one 1 units log10(DOC)
+##    CI: 1.082 and 1.17
 ## For both, a 1 unit increase in log10(DOC)
 ##    would have that effect on PAR
 
@@ -125,6 +127,11 @@ min.doc <- min(PARdata$DOC)
 max.doc <- max(PARdata$DOC)
 
 PARdata_doc_range <- PARdata %>%
+  dplyr::select(Lake, Season, WaterBody, ) |>
+  mutate(DOC.min = min.doc,
+         DOC.max = max.doc) |>
+  pivot_longer(c(DOC.min, DOC.max), values_to="DOC" ) |>
+  dplyr::select(-name) |>
   group_by(Season, WaterBody, Lake) %>%
   complete(DOC = seq(min.doc, max.doc, 0.02) ) %>%
   ungroup() |>

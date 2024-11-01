@@ -27,47 +27,47 @@ load("fully_processed_data.RData")
 source("stepwise_lmer_code.R")
 
 ### Backward selection
-uvm_back_aic <- lmerStepBackward(data=UVdata,
-                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                 random.formula = "(1 | SiteID)",
-                                 criteria = "AIC")
-uvm_back_mdl <- lmerStepBackward(data=UVdata,
-                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                 random.formula = "(1 | SiteID)",
-                                 criteria = "MDL")
+# uvm_back_aic <- lmerStepBackward(data=UVdata,
+#                                  fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                  random.formula = "(1 | SiteID)",
+#                                  criteria = "AIC")
+# uvm_back_mdl <- lmerStepBackward(data=UVdata,
+#                                  fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                  random.formula = "(1 | SiteID)",
+#                                  criteria = "MDL")
 uvm_back_bic <- lmerStepBackward(data=UVdata,
                                  fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
                                  random.formula = "(1 | SiteID)",
                                  criteria = "BIC")
 
 ### Forward selection
-uvm_forw_aic <- lmerStepForward(data=UVdata,
-                                fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "AIC")
-uvm_forw_mdl <- lmerStepForward(data=UVdata,
-                                fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "MDL")
-uvm_forw_bic <- lmerStepForward(data=UVdata,
-                                fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "BIC")
+# uvm_forw_aic <- lmerStepForward(data=UVdata,
+#                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "AIC")
+# uvm_forw_mdl <- lmerStepForward(data=UVdata,
+#                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "MDL")
+# uvm_forw_bic <- lmerStepForward(data=UVdata,
+#                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "BIC")
 
 
-save(uvm_back_aic, uvm_back_mdl, uvm_back_bic,
-     uvm_forw_aic, uvm_forw_mdl, uvm_forw_bic,
-     file="modelSelectionFits_uvm.RData")
-
-load("modelSelectionFits_uvm.RData")
-
-uvm_back_aic$BEST_FIXED_TERMS
-uvm_back_mdl$BEST_FIXED_TERMS
-uvm_back_bic$BEST_FIXED_TERMS
-
-uvm_forw_aic$BEST_FIXED_TERMS
-uvm_forw_mdl$BEST_FIXED_TERMS
-uvm_forw_bic$BEST_FIXED_TERMS
+# save(uvm_back_aic, uvm_back_mdl, uvm_back_bic,
+#      uvm_forw_aic, uvm_forw_mdl, uvm_forw_bic,
+#      file="modelSelectionFits_uvm.RData")
+# 
+# load("modelSelectionFits_uvm.RData")
+# 
+# uvm_back_aic$BEST_FIXED_TERMS
+# uvm_back_mdl$BEST_FIXED_TERMS
+# uvm_back_bic$BEST_FIXED_TERMS
+# 
+# uvm_forw_aic$BEST_FIXED_TERMS
+# uvm_forw_mdl$BEST_FIXED_TERMS
+# uvm_forw_bic$BEST_FIXED_TERMS
 
 
 
@@ -75,12 +75,16 @@ uvm_forw_bic$BEST_FIXED_TERMS
 
 ## Backward selection using BIC chosen model
 uvm_back_bic$BEST_FIXED_TERMS
+uvm_back_bic$BEST_AIC
 
-uvm.lmer <- lmer(log10(ss.1pc.estimate) ~  log10(DOC) +  WaterBody +  WaterBody:Season + log10(DOC):WaterBody +
+uvm.lmer <- lmer(log10(ss.1pc.estimate) ~  log10(DOC) +  Season + WaterBody + RiverPresent +
+                   Season:WaterBody + log10(DOC):WaterBody + Season:RiverPresent +
                         (1|SiteID), data=UVdata)  
 
 BIC(uvm.lmer)
 anova(uvm.lmer)
+## Remember, look at interactions first, the main effects p-values
+##   do not mean anything here.
 
 ## A quick residuals analysis
 plot(fitted(uvm.lmer), residuals(uvm.lmer))
@@ -100,6 +104,13 @@ plot(contrast(emmeans(uvm.lmer, ~ Season | WaterBody ), by="WaterBody", "pairwis
 ##   Spring & Summer, Spring & Fall
 ## In Open Waters, difference in
 ##    Spring & Summer, Summer & Fall
+contrast(emmeans(uvm.lmer, ~ Season | RiverPresent ), by="RiverPresent", "pairwise" )
+plot(contrast(emmeans(uvm.lmer, ~ Season | RiverPresent ), by="RiverPresent", "pairwise" ) )
+## When River is present, difference
+##     From Spring to Fall, and Spring to Summer
+## When no river present
+##    Difference from summer & fall, summer & spring
+## NOTE similar results
 
 ## This effectively shows the influence
 ##    WaterBody has on how DOC effects UV
@@ -110,9 +121,11 @@ emmip(uvm.lmer, WaterBody ~ log10(DOC), cov.reduce = range, CIs = TRUE)
 ##   and UVB depends on WaterBody type
 emmeans(uvm.lmer, ~ log10(DOC) | WaterBody)
 ## For Embayment, a 1 unit increase in log10(DOC)
-##   will lead to 0.205--0.313 more UVM
-## FOr Open Water, ...
-##    0.419--0.536 more UVM
+##   will lead to 0.252 more log10(UV) transparency
+##   CI: 0.194--0.311 more UVM
+## For Open Water, ...
+##   will lead to 0.474 more log10(UV) depth
+##   CU: 0.416--0.533 more UVM
 
 
 ###############################################
@@ -125,9 +138,13 @@ emmeans(uvm.lmer, ~ log10(DOC) | WaterBody)
 min.doc <- min(UVdata$DOC)
 max.doc <- max(UVdata$DOC)
 UVdata_doc_range <- UVdata %>%
-  group_by(WaterBody, Season) %>%
-  complete(DOC = seq(min.doc, max.doc, 0.02) ) %>%
-  dplyr::select(Season, WaterBody, DOC) |>
+  dplyr::select(Season, WaterBody, RiverPresent, BlagraveID) |>
+  mutate(DOC.min = min.doc,
+         DOC.max = max.doc) |>
+  pivot_longer(c(DOC.min, DOC.max), values_to="DOC" ) |>
+  dplyr::select(-name) |>
+  group_by(WaterBody, RiverPresent, Season, BlagraveID) %>%
+  complete(DOC = seq(min(DOC), max(DOC), 0.02) ) %>%
   ungroup() |>
   distinct() |>
   drop_na() |>
@@ -139,9 +156,7 @@ predict(uvm.lmer, as.data.frame(UVdata_doc_range),
 UVdata_pred <- UVdata_doc_range %>%
   mutate(Pred = predict(uvm.lmer, newdata=as.data.frame(UVdata_doc_range), re.form=NA) ) %>%
   mutate(PredSmooth = 10^Pred) 
- # group_by(Lake, Season, DOC, RiverPresent, WaterBody, BelgraveID) %>%
-  #summarize(Pred = mean(Pred),
-  #          PredSmooth = 10^Pred)
+ 
 
 
 our_colors = c("#cd5a53",
@@ -152,17 +167,19 @@ our_colors = c("#cd5a53",
 ggplot() + 
   geom_point(data=UVdata,
              aes(x=log10(DOC), y=(ss.1pc.estimate), 
-                 color=WaterBody), alpha=0.3, size=1.15 ) +
+                 color=BlagraveID), alpha=0.3, size=1.15 ) +
   geom_line(data=UVdata_pred, 
             aes(x=log10(DOC), y=PredSmooth,  
-            color=WaterBody,  group=WaterBody),
-            linewidth=0.65) +
+            color=BlagraveID,  group=BlagraveID,
+            linewidth=BlagraveID, linetype=BlagraveID ) ) +
   #facet_grid(Season ~ Lake) +
   facet_grid(.~Season ) +
   theme_bw() + 
   theme(legend.position="bottom",
         axis.title=element_blank() ) +
-  scale_color_manual(name="Habitat", values=our_colors[2:3]) +
+  scale_color_manual(name="Habitat", values=our_colors) +
+  scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
+  scale_linewidth_manual(values=c(0.65, 1, 0.65, 1), name="Habitat") +
   labs(title="Predicted 1% UV Depth (m) as a function of DOC by habitat and season",
        subtitle="Points correspond to observed data") +
   theme(legend.key.width = unit(1, 'cm'))

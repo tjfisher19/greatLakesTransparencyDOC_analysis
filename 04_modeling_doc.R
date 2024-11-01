@@ -30,46 +30,46 @@ source("stepwise_lmer_code.R")
 ##    we consider the others as well.
 
 ### Backward selection
-doc_back_aic <- lmerStepBackward(data=drop_na(PARdata, DOC),
-                                 fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
-                                 random.formula = "(1 | SiteID)",
-                                 criteria = "AIC")
-doc_back_mdl <- lmerStepBackward(data=drop_na(PARdata, DOC),
-                                 fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
-                                 random.formula = "(1 | SiteID)",
-                                 criteria = "MDL")
+# doc_back_aic <- lmerStepBackward(data=drop_na(PARdata, DOC),
+#                                  fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
+#                                  random.formula = "(1 | SiteID)",
+#                                  criteria = "AIC")
+# doc_back_mdl <- lmerStepBackward(data=drop_na(PARdata, DOC),
+#                                  fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
+#                                  random.formula = "(1 | SiteID)",
+#                                  criteria = "MDL")
 doc_back_bic <- lmerStepBackward(data=drop_na(PARdata, DOC),
                                  fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
                                  random.formula = "(1 | SiteID)",
                                  criteria = "BIC")
 
 ### Forward selection
-doc_forw_aic <- lmerStepForward(data=drop_na(PARdata, DOC),
-                                fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "AIC")
-doc_forw_mdl <- lmerStepForward(data=drop_na(PARdata, DOC),
-                                fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "MDL")
-doc_forw_bic <- lmerStepForward(data=drop_na(PARdata, DOC),
-                                fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
-                                random.formula = "(1 | SiteID)",
-                                criteria = "BIC")
+# doc_forw_aic <- lmerStepForward(data=drop_na(PARdata, DOC),
+#                                 fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "AIC")
+# doc_forw_mdl <- lmerStepForward(data=drop_na(PARdata, DOC),
+#                                 fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "MDL")
+# doc_forw_bic <- lmerStepForward(data=drop_na(PARdata, DOC),
+#                                 fixed.formula = "log10(DOC) ~ Lake * Year * Season * WaterBody*RiverPresent",
+#                                 random.formula = "(1 | SiteID)",
+#                                 criteria = "BIC")
 
-save(doc_back_aic, doc_back_mdl, doc_back_bic,
-     doc_forw_aic, doc_forw_mdl, doc_forw_bic,
-     file="modelSelectionFits_doc.RData")
-
-load("modelSelectionFits_doc.RData")
-
-doc_back_aic$BEST_FIXED_TERMS
-doc_back_mdl$BEST_FIXED_TERMS
-doc_back_bic$BEST_FIXED_TERMS
-
-doc_forw_aic$BEST_FIXED_TERMS
-doc_forw_mdl$BEST_FIXED_TERMS
-doc_forw_bic$BEST_FIXED_TERMS
+# save(doc_back_aic, doc_back_mdl, doc_back_bic,
+#      doc_forw_aic, doc_forw_mdl, doc_forw_bic,
+#      file="modelSelectionFits_doc.RData")
+# 
+# load("modelSelectionFits_doc.RData")
+# 
+# doc_back_aic$BEST_FIXED_TERMS
+# doc_back_mdl$BEST_FIXED_TERMS
+# doc_back_bic$BEST_FIXED_TERMS
+# 
+# doc_forw_aic$BEST_FIXED_TERMS
+# doc_forw_mdl$BEST_FIXED_TERMS
+# doc_forw_bic$BEST_FIXED_TERMS
 
 
 
@@ -81,7 +81,7 @@ doc_forw_bic$BEST_FIXED_TERMS
 ############################################
 doc_back_bic$BEST_FIXED_TERMS
 
-doc.lmer <- lmer(log10(DOC) ~ Year + WaterBody + Season:WaterBody +
+doc.lmer <- lmer(log10(DOC) ~ Year + WaterBody + Season +  Season:WaterBody +
                    (1|SiteID), data=drop_na(PARdata,DOC) )
 
 anova(doc.lmer)
@@ -104,7 +104,9 @@ qqline(residuals(doc.lmer))
 
 emtrends(doc.lmer, ~ Year, var="Year")
 ## The trend is significant & positive,
-##   0.00143-0.00322 log10(mg/L) per year
+##  For every year that goes by, expect DOC
+##     to increase by 0.00234 log10(mg/L)
+##  CI: 0.00144-0.00322 log10(mg/L) per year
 
 
 ########################################
@@ -113,9 +115,11 @@ emtrends(doc.lmer, ~ Year, var="Year")
 
 emmeans(doc.lmer, ~ WaterBody | Season)
 contrast(emmeans(doc.lmer, ~ WaterBody | Season), by="WaterBody", method="pairwise")
+plot(contrast(emmeans(doc.lmer, ~ WaterBody | Season), by="WaterBody", method="pairwise") )
 ## In Embayments, we see a difference between
 ##   Spring and Fall
 ##   Summer and Fall
+## No differences in Open Waters by season
 
 
 

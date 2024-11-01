@@ -14,20 +14,17 @@
 ##
 ##    The data is in /home/user/project1/
 ##  
-## Step 2 - Download data from here:
+## Step 2 - We use the data that was supplied from the original source here:
 ##   https://data.ontario.ca/dataset/water-chemistry-great-lakes-nearshore-areas
 ##
-##   NOTE: for now we also use the emailed file
+##   NOTE: Our version is in other_data_sources/DOC Data_GLMNN 2002-2022_ORIGINAL.xlsx
 ##
-## Put in another folder such as 
-##       /home/user/project1/great_lakes_chemistry/
-##
-## Step 3 - Get the BlagraveIDTable data from our github
-##    https://github.com/tjfisher19/greatLakesTransparencyDOC_analysis/blagraveID
+## Step 3 - User the BlagraveIDTable data from our github
+##    https://github.com/tjfisher19/greatLakesTransparencyDOC_analysis/other_data_sources
 ##
 ## Put in another folder
 ##       /home/user/project1/blagraveID
-
+##
 
 library(tidyverse)
 
@@ -59,7 +56,7 @@ tmp_light_data <- read_csv("./edi.1321.6/Data_GreatLakes.csv") |>
   # dplyr::filter(!SiteID %in% sites_to_drop)
 
 ## So for now, use this
-tmp_site_data <- read_csv("./edi.1321.6/Howell-StationID.csv") |>
+tmp_site_data <- read_csv("./other_data_sources/Howell-StationID.csv") |>
   dplyr::filter(!SiteID %in% sites_to_drop) |>
   mutate(Lake = str_extract(NewSiteName, "Erie|Superior|Huron|Ontario") ) |>
   dplyr::select(SiteID, Site=NewSiteName, Lake, BOW, Station)
@@ -79,70 +76,18 @@ light_data <- tmp_light_data |>
 
 ####################################################
 ## Now the DOC data
-
-## Four great lakes, each is its own sheet in the excel document
-##
-## We extract the BOW number and Station number from the
-##   reported `Station No`.
-## When data is collected, it is done so three times in a short
-##   time window, so we aggregate into a mean DOC.
-
-get_lake_doc <- function(sheet=1) {
-  tmp_chemistry <- readxl::read_xlsx("./great_lake_chemistry/GLIS_WATER_CHEMISTRY.xlsx", sheet=sheet)
-  
-  lake_doc <- tmp_chemistry |>
-    filter(year(`Collect Date`) %in% 2002:2022,
-           `Test Code`=="DOC",
-           `Sample Type Code` == 12) %>%
-    mutate(`Station No` = as.character(`Station No`) ) |>
-    mutate(BOW = ifelse(str_length(`Station No`)==9,
-                        as.numeric(str_sub(`Station No`, 1, 1) ),
-                        as.numeric(str_sub(`Station No`, 1, 2) ) ),
-           Station = ifelse(str_length(`Station No`)==9,
-                            as.numeric(str_sub(`Station No`, 6, 9) ),
-                            as.numeric(str_sub(`Station No`, 7, 10) ) ) ) |>
-    group_by(Date=date(`Collect Date`), lat=`Latitude In Dec`, long=`Longitude In Dec`, BOW, Station) %>%
-    summarize(DOC = mean(as.numeric(Result), na.rm=TRUE))
-
-  lake_doc
-}
-
-###########################################
-## Same as above but with the 2019 data
-
-get_lake_doc19 <- function(sheet=1) {
-  tmp_chemistry <- readxl::read_xlsx("./great_lake_chemistry/GLIS_WATER_CHEMISTRY_2019.xlsx", sheet=sheet)
-  
-  lake_doc <- tmp_chemistry |>
-    filter(year(`Collect Date`) %in% 2002:2022,
-           `Test Code`=="DOC",
-           `Sample Type Code` == 12) %>%
-    mutate(`Station No` = as.character(`Station No`) ) |>
-    mutate(BOW = ifelse(str_length(`Station No`)==9,
-                        as.numeric(str_sub(`Station No`, 1, 1) ),
-                        as.numeric(str_sub(`Station No`, 1, 2) ) ),
-           Station = ifelse(str_length(`Station No`)==9,
-                            as.numeric(str_sub(`Station No`, 6, 9) ),
-                            as.numeric(str_sub(`Station No`, 7, 10) ) ) ) |>
-    group_by(Date=date(`Collect Date`), lat=`Latitude In Dec`, long=`Longitude In Dec`, BOW, Station) %>%
-    summarize(DOC = mean(as.numeric(Result), na.rm=TRUE))
-  
-  lake_doc
-}
-
-##########################################################
-##  Date from 2020--2022
+#########################################################
+##  Date from 2002--2022
 ## 
 ##  Currently from an emailed file
 ##    eventually use the originals 
 ##    once published online - code similar to the above
 ##    should work
 ##
-tmp_lake_doc_data20.21.22 <- readxl::read_excel("./great_lake_chemistry/DOC Data_GLMN 2002-2022_ORGINAL.xlsx")
+tmp_lake_doc_data <- readxl::read_excel("./other_data_sources/DOC Data_GLMN 2002-2022_ORGINAL.xlsx")
 
-tmp_lake_doc_data20.21.22 <- tmp_lake_doc_data20.21.22 |>
-  filter(Year %in% 2020:2022,
-         TestCode == "DOC",
+lakes_doc_data <- tmp_lake_doc_data |>
+  filter(TestCode == "DOC",
          SMP == "12") |>
   mutate(Date = date(Date) ) %>%
   mutate(STATION_FULL = as.character(STATION_FULL) ) |>
@@ -155,9 +100,7 @@ tmp_lake_doc_data20.21.22 <- tmp_lake_doc_data20.21.22 |>
   group_by(Date=date(Date), lat=LAT, long=LONG, BOW, Station) %>%
   summarize(DOC = mean(as.numeric(Result), na.rm=TRUE))
 
-lakes_doc_data <- bind_rows(lapply(1:4, get_lake_doc), 
-                            lapply(1:3, get_lake_doc19), 
-                            tmp_lake_doc_data20.21.22)
+ 
 
 
 ###############################################
@@ -173,10 +116,10 @@ light_doc_data <- light_data |>
 
 ##############################
 ## Lastly, the Blagrave IDs
-tmp_blagrave <- readxl::read_excel("blagraveID/BlagraveIDTable_23sep2024.xlsx")
+tmp_blagrave <- readxl::read_excel("other_data_sources/BlagraveIDTable_23sep2024.xlsx")
 
 full_light_data <- light_doc_data |>
-  left_join(tmp_blagrave, by="SiteID")
+  inner_join(tmp_blagrave, by="SiteID")
 
 #######################################################
 ## Some additional data Processing
