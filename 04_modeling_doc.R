@@ -130,7 +130,7 @@ plot(contrast(emmeans(doc.lmer, ~ WaterBody | Season), by="WaterBody", method="p
 
 DOCdata_pred_range <- PARdata %>%
   group_by(Season, WaterBody) %>%
-  complete(Year = seq(min(Year), max(Year), 0.2) ) %>%
+  complete(Year = seq(min(Year), max(Year)+1, 0.2) ) %>%
   distinct(Season, Year) %>%
   mutate(SiteID = -1) %>%
   ungroup() %>%
@@ -158,7 +158,7 @@ our_colors = c("#cd5a53",
                "#2eb5ce")
 
 ggplot(DOCdata_pred) + 
-  geom_point(data=UVdata, alpha=0.3, size=0.95, aes(x=Date, y=ss.1pc.estimate, color=WaterBody) ) +       ## Add data?
+  geom_point(data=PARdata, alpha=0.3, size=0.95, aes(x=Date, y=DOC, color=WaterBody) ) +       ## Add data?
   #geom_ribbon(aes(x=YearPlot, ymin=Lo, ymax=Hi, fill=Season, group=Season), alpha=0.2) +               ## Ribbons -- too busy?
   #geom_errorbar(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=0.35, show.legend=FALSE ) + ## Error bars -- maybe better?
   #geom_linerange(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=3, alpha=0.4 ) +           ## Another version of error bars
