@@ -3,8 +3,9 @@ title: "Supplemental Document"
 subtitle: "Decreased water transparency of nearshore Laurentian Great Lakes habitats is driven by increased dissolved organic carbon."
 author: "Thomas Fisher"
 format: 
-   html:
+   gfm:
      prefer-html: true
+     html-math-method: webtex
      df-print: kable
      embed-resources: true
      toc: true
