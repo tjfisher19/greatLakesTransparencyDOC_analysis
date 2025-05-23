@@ -58,14 +58,19 @@ label_df <- data.frame(Lake = c("Superior", "Huron", "Erie", "Ontario"),
                        x = c(-87.40, -82.575, -80.5, -76.2),
                        y = c(47.78, 44.55, 42.2, 43.5))
 
+our_colors = c("#cd5a53",
+               "#cd5a53",
+               "#2eb5ce",
+               "#2eb5ce")
 
 p_map_sites <- ggplot() + 
   geom_sf(data=usa_map,  fill="gray98", color="gray75", linewidth=0.35) + 
   geom_sf(data=can_prov, fill="gray98", color="gray75", linewidth=0.35) +
-  geom_sf(data=site_data,  size=0.95, color="gray30") + 
+  #geom_sf(data=site_data,  size=0.95, color="gray30") +
+  geom_sf(data=site_data,  size=2, aes(color=BlagraveID, shape=BlagraveID) ) +
   geom_label(data=label_df, aes(x=x, y=y, label=Lake), color="gray40", size=3) +
-  scale_color_manual(values=c("gray20", "gray50"), name="Sampling Design") +
-  scale_shape_manual(name="Sampling Design", values=c(16, 17)) + 
+  scale_color_manual(values=our_colors, name="Habitat Type") +
+  scale_shape_manual(name="Habitat Type", values=c(16, 17, 16, 17)) + 
   theme_map() +
   coord_sf(xlim = c(-92.31, -73.5), ylim = c(40.5, 50), expand = FALSE, crs="NAD27") +
   theme(legend.position.inside=c(0.8, 0.8),

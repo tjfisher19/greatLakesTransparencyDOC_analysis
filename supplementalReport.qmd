@@ -1,0 +1,387 @@
+---
+title: "Supplemental Document"
+subtitle: "Decreased water transparency of nearshore Laurentian Great Lakes habitats is driven by increased dissolved organic carbon."
+author: "Thomas Fisher"
+format: 
+   html:
+     prefer-html: true
+     df-print: kable
+     embed-resources: true
+     toc: true
+     toc-location: left
+     toc-title: Table of Contents
+editor: visual
+---
+
+
+
+
+```{r, include=FALSE}
+library(tidyverse)
+library(lmerTest)
+library(broom.mixed)
+library(kableExtra)
+library(patchwork)
+library(performance)
+```
+
+
+
+## Caveats
+
+A few important things to remember when looking at this report
+
+* We used mixed effect models, so some of the standard regression measures and diagnostics are not verbatim the same; *e.g.*, marginal and conditional $R^2$ instead of the standard coefficient of determination.
+* The response variable in each model has been transformed with a base-10 logarithm.
+   + So linear models are reported, but for a log-response.
+   + In the original units, we effectively are fitting an exponential or power function.
+* The covariate input, DOC, has also been log-transformed as it is right skewed and this helps meet the linearity assumption.
+* We fit models with interaction terms, so the main effects can only be interpreted with respect to the interaction terms.
+* A backward selection algorithm was implemented to choose the *best* model using the Bayesian Information Criteria (BIC).  This document reports that chosen model.
+
+## Dissolved Organic Carbon analysis
+
+The backward selection procedure chose the following model
+
+$$
+\begin{multline}
+\log_{10}(DOC) = \beta_0 + \beta_1\times Year+ \beta_2\times Summer + \beta_3\times Fall + \beta_4\times Non\text{-}embayment +\\
+\beta_6\times Summer\times Non\text{-}embayment + \beta_7\times Fall\times Non\text{-}embayment
+\end{multline}
+$$
+
+
+where the $\beta_0$ term is a random effect to account for the variability at each site (similar to a block term in experimental design). The variable $Year$ measures times since the beginning of data collection. The variables $Summer$, $Fall$, and $Non\text{-}embayment$ are indicator, or dummy, variables indicating the observation occurred in that season or water type. 
+
+### Residuals analysis
+
+```{r, include=FALSE}
+load("fittedModelDOC.RData")
+docResidData <- PARdata |>
+  mutate(Residuals = residuals(doc.lmer),
+         StdResiduals = scale(Residuals),
+         Fitted = fitted(doc.lmer))
+doc.resid.v.fitted <- ggplot(docResidData) +
+  geom_abline(intercept=0, slope=0, color="gray45") +
+  geom_point(aes(x=Fitted, y=StdResiduals), color="gray30" ) + 
+  geom_smooth(aes(x=Fitted, y=StdResiduals), 
+              formula="y ~ x", method="loess", span=1, se=FALSE) + 
+  theme_bw() +
+  labs(title="Residuals vs Fitted",
+       x="Fitted values",
+       y="Standardized Residuals")
+doc.resid.qqplot <- ggplot(docResidData) +
+  geom_abline(intercept=0, slope=1, color="gray45") +
+  geom_qq(aes(sample=StdResiduals), distribution=qnorm, color="gray30") +
+  theme_bw() +
+  labs(title="Normal Q-Q Plot",
+       x="Theoretical Quantile",
+       y="Empirical Quantile")
+```
+
+First, we take a look at some residual plots before proceeding to look at the model
+
+```{r, echo=FALSE, fig.height=4, fig.width=6.5}
+doc.resid.v.fitted + doc.resid.qqplot
+```
+
+Nothing overly concerning here.  
+
+### Measures of model fit
+
+Some overall model measures
+
+```{r, echo=FALSE}
+glance(doc.lmer, conf.int=TRUE) |>
+  dplyr::select(N=nobs,
+                df=df.residual,
+                Resid.SE=sigma,
+                AIC,
+                BIC) |>
+  mutate(`Marginal R2`=r2(doc.lmer)$R2_marginal,
+         `Conditional R2` = r2(doc.lmer)$R2_conditional) |>
+  kable(digits=3)
+```
+
+We note that the fixed effects in the model do not capture much of the variability in DOC (the marginal $R^2$).  This indicates that the DOC levels are varying quite a bit by the site.
+
+### Model coefficients
+
+We can look at the coefficients for the fixed effects in the fitted model (or expected value of the random effect)... Recall the response here is the $\log_{10}$ of the 1% PAR Depth (m)
+
+```{r, echo=FALSE}
+tidy(doc.lmer) |>
+  dplyr::filter(effect=="fixed") |>
+  dplyr::select(-group, -effect) |>
+  rename(Term=term,
+         Estimate = estimate,
+         SE = std.error,
+         `t.stat`=statistic) |>
+  kable(digits=3) |>
+  kable_styling(bootstrap_options = "striped")
+```
+
+and the two standard deviation measures associated with the model
+
+```{r, echo=FALSE}
+tidy(doc.lmer) |>
+  dplyr::filter(effect=="ran_pars") |>
+  dplyr::select(group, term, estimate) |>
+  rename(Group = group,
+         Term = term,
+         Estimate = estimate) |>
+  kable(digits=3) |>
+  kable_styling(bootstrap_options = "striped", full_width=FALSE)
+```
+
+### Plots of fitted model
+
+And a plot of the fitted model (response is log-transformed)
+
+```{r, echo=FALSE, fig.height=4.5, fig.width=6.5}
+p_log_doc_fitted
+```
+
+And on the original units
+
+```{r, echo=FALSE, fig.height=4.5, fig.width=6.5}
+p_doc_fitted
+```
+
+Note, these are exponential fits, but the predicted values on the logarithmic scale (a linear model) do not vary all that much, so the fitted models on the original scale appears almost linear.
+
+## 1% UV depth analysis
+
+Our backward selection procedure chose the following model
+
+$$
+\begin{multline}
+\log_{10}(UV) = \beta_0 + \beta_1\log_{10}(DOC) + \beta_2\times Summer + \beta_3\times Fall + \beta_4\times Non\text{-}embayment + \beta_5\times River +\\
+\beta_6\times Summer\times Non\text{-}embayment + \beta_7\times Fall\times Non\text{-}embayment + \\
+\beta_8\log_{10}(DOC)\times Non\text{-}embayment + \beta_9\times Summer\times River + \beta_{10}\times Fall\times River
+\end{multline}
+$$
+
+where the $\beta_0$ term is a random effect to account for the variability at each site (similar to a block term in experimental design). The variables $Summer$, $Fall$, $Non\text{-}embayment$ and $River$ would all be indicator, or dummy, variables indicating the observation occurred in that season, water type or in the presence of a river. 
+                        
+
+### Residual analysis
+
+```{r, include=FALSE}
+load("fittedModelUV.RData")
+uvmResidData <- UVdata |>
+  mutate(Residuals = residuals(uvm.lmer),
+         StdResiduals = scale(Residuals),
+         Fitted = fitted(uvm.lmer))
+uvm.resid.v.fitted <- ggplot(uvmResidData) +
+  geom_abline(intercept=0, slope=0, color="gray45") +
+  geom_point(aes(x=Fitted, y=StdResiduals), color="gray30" ) + 
+  geom_smooth(aes(x=Fitted, y=StdResiduals), 
+              formula="y ~ x", method="loess", span=1, se=FALSE) + 
+  theme_bw() +
+  labs(title="Residuals vs Fitted",
+       x="Fitted values",
+       y="Standardized Residuals")
+uvm.resid.qqplot <- ggplot(uvmResidData) +
+  geom_abline(intercept=0, slope=1, color="gray45") +
+  geom_qq(aes(sample=StdResiduals), distribution=qnorm, color="gray30") +
+  theme_bw() +
+  labs(title="Normal Q-Q Plot",
+       x="Theoretical Quantile",
+       y="Empirical Quantile")
+```
+
+First, we take a look at some residual plots before proceeding to look at the model output
+
+```{r, echo=FALSE, fig.height=4, fig.width=6.5}
+uvm.resid.v.fitted + uvm.resid.qqplot
+```
+
+Nothing overly concerning here.  Some minor deviation from Normality but regression methods are robust to some minor deviations from normality.
+
+### Measure of model fit
+
+Some overall model measures
+
+```{r, echo=FALSE}
+glance(uvm.lmer) |>
+  dplyr::select(N=nobs,
+                df=df.residual,
+                Resid.SE=sigma,
+                AIC,
+                BIC) |>
+  mutate(`Marginal R2`=r2(uvm.lmer)$R2_marginal,
+         `Conditional R2` = r2(uvm.lmer)$R2_conditional) |>
+  kable(digits=3)
+```
+
+Here, the fixed effects (which include DOC) explain about 57% of the variability. After including the site level variation, the overall model explains about 84% of the variability in the log of 1% UV depth.
+
+### Model coefficients
+
+The fixed effects in the fitted model (or expected value of the random effect)... Recall the response here is the $\log_{10}$ of the 1% UV Depth (m)
+
+```{r, echo=FALSE}
+tidy(uvm.lmer) |>
+  dplyr::filter(effect=="fixed") |>
+  dplyr::select(-group, -effect) |>
+  rename(Term=term,
+         Estimate = estimate,
+         SE = std.error,
+         `t.stat`=statistic) |>
+  kable(digits=3) |>
+  kable_styling(bootstrap_options = "striped")
+```
+
+and the two standard deviation measures associated with the model
+
+```{r, echo=FALSE}
+tidy(uvm.lmer) |>
+  dplyr::filter(effect=="ran_pars") |>
+  dplyr::select(group, term, estimate) |>
+  rename(Group = group,
+         Term = term,
+         Estimate = estimate) |>
+  kable(digits=3) |>
+  kable_styling(bootstrap_options = "striped", full_width=FALSE)
+```
+
+### Plots of fitted model
+
+Here is a plot of the fitted linear model. Both the response (1% UV Depth) and covariate (DOC) are on a base-10 logarithm scale.
+
+```{r, echo=FALSE, fig.height=4.5, fig.width=6.5}
+p_log_uvm_fitted
+```
+
+Here is the same model with the response in the original units. 
+
+```{r, echo=FALSE, fig.height=4.5, fig.width=6.5}
+p_uvm_fitted
+```
+
+and here is a version where both the response and DOC are in the original units.
+
+```{r, echo=FALSE, fig.height=4.5, fig.width=6.5}
+p_uvm_fitted_doc
+```
+
+
+## 1% PAR depth analysis
+
+The backward selection procedure chose the following model
+
+$$
+\begin{multline}
+\log_{10}(PAR) = \beta_0 + \beta_1\log_{10}(DOC) + \beta_2\times Huron + \beta_3\times Erie + \beta_4\times Ontario + \\
+\beta_5\times Summer + \beta_6\times Fall + \beta_7\times Non\text{-}embayment + \beta_8\log_{10}(DOC)\times Non\text{-}embayment
+\end{multline}
+$$
+
+
+where the $\beta_0$ term is a random effect to account for the variability at each site (similar to a block term in experimental design). The variables $Huron$, $Erie$, $Ontario$ $Summer$, $Fall$, and $OpenWater$ are indicator, or dummy, variables indicating the observation occurred in that lake, season, or water type. 
+
+### Residual analysis
+
+
+```{r, include=FALSE}
+load("fittedModelPAR.RData")
+parResidData <- PARdata |>
+  mutate(Residuals = residuals(par.lmer),
+         StdResiduals = scale(Residuals),
+         Fitted = fitted(par.lmer))
+par.resid.v.fitted <- ggplot(parResidData) +
+  geom_abline(intercept=0, slope=0, color="gray45") +
+  geom_point(aes(x=Fitted, y=StdResiduals), color="gray30" ) + 
+  geom_smooth(aes(x=Fitted, y=StdResiduals), 
+              formula="y ~ x", method="loess", span=1, se=FALSE) + 
+  theme_bw() +
+  labs(title="Residuals vs Fitted",
+       x="Fitted values",
+       y="Standardized Residuals")
+par.resid.qqplot <- ggplot(parResidData) +
+  geom_abline(intercept=0, slope=1, color="gray45") +
+  geom_qq(aes(sample=StdResiduals), distribution=qnorm, color="gray30") +
+  theme_bw() +
+  labs(title="Normal Q-Q Plot",
+       x="Theoretical Quantile",
+       y="Empirical Quantile")
+```
+
+
+First, we take a look at some residual plots before proceeding to look at the model
+
+```{r, echo=FALSE, fig.height=4, fig.width=6.5}
+par.resid.v.fitted + par.resid.qqplot
+```
+
+Nothing overly concerning here.  Some minor deviation from Normality but regression methods are robust to some minor deviations from normality.
+
+### Measures of model fit
+
+Some overall model measures
+
+```{r, echo=FALSE}
+glance(par.lmer, conf.int=TRUE) |>
+  dplyr::select(N=nobs,
+                df=df.residual,
+                Resid.SE=sigma,
+                AIC,
+                BIC) |>
+  mutate(`Marginal R2`=r2(par.lmer)$R2_marginal,
+         `Conditional R2` = r2(par.lmer)$R2_conditional) |>
+  kable(digits=3)
+```
+
+The fixed effect in the chosen model explain about 52% of the variability in the logarithm of PAR depth. When accounting for the variability within each site, the model explains about 66% of the varibility.
+
+### Model coefficients
+
+The fixed effects in the fitted model (or expected value of the random effect)... Recall the response here is the $\log_{10}$ of the PAR Depth (m)
+
+```{r, echo=FALSE}
+tidy(par.lmer) |>
+  dplyr::filter(effect=="fixed") |>
+  dplyr::select(-group, -effect) |>
+  rename(Term=term,
+         Estimate = estimate,
+         SE = std.error,
+         `t.stat`=statistic) |>
+  kable(digits=3) |>
+  kable_styling(bootstrap_options = "striped")
+```
+
+and the two standard deviation measures associated with the model
+
+```{r, echo=FALSE}
+tidy(par.lmer) |>
+  dplyr::filter(effect=="ran_pars") |>
+  dplyr::select(group, term, estimate) |>
+  rename(Group = group,
+         Term = term,
+         Estimate = estimate) |>
+  kable(digits=3) |>
+  kable_styling(bootstrap_options = "striped", full_width=FALSE)
+```
+
+### Plots of the fitted model
+
+And a plot of the fitted linear model (log of PAR with log of DOC
+
+```{r, echo=FALSE, fig.width=6.5}
+p_log_par_fitted
+```
+
+and with PAR in the original units
+
+```{r, echo=FALSE, fig.width=6.5}
+p_par_fitted
+```
+
+and another version with DOC and PAR in their original units.
+
+```{r, echo=FALSE, fig.width=6.5}
+p_par_fitted_doc
+```
+
+

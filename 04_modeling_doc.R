@@ -81,7 +81,7 @@ doc_back_bic <- lmerStepBackward(data=drop_na(PARdata, DOC),
 ############################################
 doc_back_bic$BEST_FIXED_TERMS
 
-doc.lmer <- lmer(log10(DOC) ~ Year + WaterBody + Season +  Season:WaterBody +
+doc.lmer <- lmer(log10(DOC) ~ Year + Season + WaterBody + Season:WaterBody +
                    (1|SiteID), data=drop_na(PARdata,DOC) )
 
 anova(doc.lmer)
@@ -157,7 +157,32 @@ our_colors = c("#cd5a53",
                "#2eb5ce",
                "#2eb5ce")
 
-ggplot(DOCdata_pred) + 
+
+p_log_doc_fitted <- ggplot(DOCdata_pred) + 
+  geom_point(data=PARdata, alpha=0.3, size=0.95, aes(x=Date, y=log10(DOC), color=WaterBody) ) +       ## Add data?
+  #geom_ribbon(aes(x=YearPlot, ymin=Lo, ymax=Hi, fill=Season, group=Season), alpha=0.2) +               ## Ribbons -- too busy?
+  #geom_errorbar(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=0.35, show.legend=FALSE ) + ## Error bars -- maybe better?
+  #geom_linerange(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=3, alpha=0.4 ) +           ## Another version of error bars
+  geom_line(aes(x=YearPlot, y=Pred, color=WaterBody),
+            linewidth=0.65) +
+  #geom_point(aes(x=YearPlot, y=Pred, color=Season), size=2.2 ) +
+  #facet_grid(Season ~ Lake) +
+  #facet_wrap(~Lake)+ 
+  facet_wrap(.~Season) + 
+  theme_bw() + 
+  theme(legend.position="bottom" ) +
+  #scale_y_continuous(limits=c(-0.5,9), breaks=seq(0,9,3)) +                  ## Turn off if including the data
+  scale_x_date(date_breaks="4 years", date_labels="%Y") +
+  scale_color_manual(values=our_colors[2:3], name="Habitat") + 
+  labs(title="Predicted Log-DOC (mg/L) by season",
+       subtitle="From Backward Selection using BIC",
+       y=expression("Logarithm of DOC"~~~log[10](mg/L)),
+       x="Time") +
+  # scale_linetype_manual(values = c("solid","dashed","11") ) +
+  #scale_linewidth_manual(values=c(0.65, 0.75, 1, 1)) +
+  theme(legend.key.width = unit(2, 'cm'))
+
+p_doc_fitted <- ggplot(DOCdata_pred) + 
   geom_point(data=PARdata, alpha=0.3, size=0.95, aes(x=Date, y=DOC, color=WaterBody) ) +       ## Add data?
   #geom_ribbon(aes(x=YearPlot, ymin=Lo, ymax=Hi, fill=Season, group=Season), alpha=0.2) +               ## Ribbons -- too busy?
   #geom_errorbar(aes(x=YearPlot, ymin=LoSmooth, ymax=HiSmooth, color=Season), linewidth=0.35, show.legend=FALSE ) + ## Error bars -- maybe better?
@@ -169,16 +194,26 @@ ggplot(DOCdata_pred) +
   #facet_wrap(~Lake)+ 
   facet_wrap(.~Season) + 
   theme_bw() + 
-  theme(legend.position="bottom",
-        axis.title=element_blank() ) +
+  theme(legend.position="bottom" ) +
   #scale_y_continuous(limits=c(-0.5,9), breaks=seq(0,9,3)) +                  ## Turn off if including the data
-  scale_x_date(date_breaks="4 years", date_labels="%Y") +
+  scale_x_date(date_breaks="5 years", date_labels="%Y") +
   scale_color_manual(values=our_colors[2:3], name="Habitat") + 
-  labs(title="Predicted DOC (mg/L) by season",
-       subtitle="From Backward Selection using BIC") +
+  labs(y="DOC (mg/L)",
+       x="Date") +
  # scale_linetype_manual(values = c("solid","dashed","11") ) +
   #scale_linewidth_manual(values=c(0.65, 0.75, 1, 1)) +
   theme(legend.key.width = unit(2, 'cm'))
 
-ggsave(filename="plots/pred_doclevels_trend.png", width=8, height=2.95)
+p_log_doc_fitted
+p_doc_fitted
 
+## Figure for manuscript
+ggsave(filename="plots/pred_doclevels_trend.png", 
+       width=8, height=2.95, bg="white")
+
+p_doc_fitted <- p_doc_fitted +
+  labs(title="Predicted DOC (mg/L) by season",
+       subtitle="From Backward Selection using BIC")
+
+save(PARdata, DOCdata_pred, p_log_doc_fitted, p_doc_fitted, doc.lmer,
+     file="fittedModelDOC.RData")

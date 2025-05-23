@@ -76,8 +76,7 @@ par_back_bic <- lmerStepBackward(data=PARdata,
 ## Using backward selection with BIC
 
 par_back_bic$BEST_FIXED_TERMS
-par_back_bic$BEST_AIC
-par.lmer <- lmer(log10(ss.1pc.estimate) ~ Lake + Season + log10(DOC) + WaterBody + log10(DOC)*WaterBody + 
+par.lmer <- lmer(log10(ss.1pc.estimate) ~ log10(DOC) + Lake + Season + WaterBody + log10(DOC)*WaterBody + 
                         (1|SiteID), data=PARdata)  
 BIC(par.lmer)
 anova(par.lmer)
@@ -125,18 +124,21 @@ emmeans(par.lmer, ~ log10(DOC) | WaterBody)
 
 min.doc <- min(PARdata$DOC)
 max.doc <- max(PARdata$DOC)
-
+# 
+# PARdata_doc_range <- PARdata %>%
+#   dplyr::select(Lake, Season, WaterBody, ) |>
+#   mutate(DOC.min = min.doc,
+#          DOC.max = max.doc) |>
 PARdata_doc_range <- PARdata %>%
-  dplyr::select(Lake, Season, WaterBody, ) |>
-  mutate(DOC.min = min.doc,
-         DOC.max = max.doc) |>
-  pivot_longer(c(DOC.min, DOC.max), values_to="DOC" ) |>
-  dplyr::select(-name) |>
-  group_by(Season, WaterBody, Lake) %>%
-  complete(DOC = seq(min.doc, max.doc, 0.02) ) %>%
+  group_by(Lake, Season, WaterBody ) |>
+  summarize(DOC.min = min(DOC),
+            DOC.max = max(DOC)) |>
+  group_by(Season, WaterBody, Lake) |>
+  mutate(DOC = 0) |>
+  complete(DOC = seq(DOC.min, DOC.max, 0.02) ) |>
   ungroup() |>
   dplyr::select(Lake, Season, DOC, WaterBody) |>
-  drop_na() |>
+  dplyr::filter(DOC > 0 ) |>
   distinct() |>
   mutate(SiteID = -1)
 
@@ -155,23 +157,82 @@ our_colors = c("#cd5a53",
                "#2eb5ce",
                "#2eb5ce")
 
-ggplot() + 
+p_log_par_fitted <- ggplot() + 
+  geom_point(data=PARdata,
+             aes(x=log10(DOC), y=log10(ss.1pc.estimate), 
+                 color=WaterBody), alpha=0.3, size=1.15 ) +
+  geom_line(data=PARdata_pred, 
+            aes(x=log10(DOC), y=Pred,  
+                color=WaterBody,  group=WaterBody),
+            linewidth=0.75) +
+  facet_grid(Season ~ Lake) +
+  theme_bw() + 
+  theme(legend.position="bottom") +
+  #  scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
+  scale_color_manual(name="Habitat", values=our_colors[2:3]) +
+  scale_x_continuous(breaks=seq(0,0.8, 0.2), limits=c(0,0.85) ) +
+  #scale_y_continuous(breaks=seq(0, 60, 20), limits=c(0,65) ) +
+  labs(title="Predicted PAR Depth (m) as a function of DOC by habitat and season",
+       subtitle="Points correspond to observed data",
+       y=expression("Logarithm of PAR Depth"~~~log[10](m)),
+       x=expression(log[10](DOC))) +
+  theme(legend.key.width = unit(1, 'cm'))
+
+p_par_fitted <- ggplot() + 
   geom_point(data=PARdata,
              aes(x=log10(DOC), y=(ss.1pc.estimate), 
                  color=WaterBody), alpha=0.3, size=1.15 ) +
   geom_line(data=PARdata_pred, 
             aes(x=log10(DOC), y=PredSmooth,  
             color=WaterBody,  group=WaterBody),
-            linewidth=0.65) +
+            linewidth=0.75) +
   facet_grid(Season ~ Lake) +
   theme_bw() + 
-  theme(legend.position="bottom",
-        axis.title=element_blank() ) +
-  scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
+  theme(legend.position="bottom") +
+#  scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
   scale_color_manual(name="Habitat", values=our_colors[2:3]) +
+  scale_x_continuous(breaks=seq(0,0.8, 0.2), limits=c(0,0.85) ) +
+  scale_y_continuous(breaks=seq(0, 60, 20), limits=c(0,65) ) +
   labs(title="Predicted PAR Depth (m) as a function of DOC by habitat and season",
-       subtitle="Points correspond to observed data") +
+       subtitle="Points correspond to observed data",
+       y="PAR Depth (m)",
+       x=expression(log[10](DOC))) +
   theme(legend.key.width = unit(1, 'cm'))
 
-ggsave(filename="plots/pred_PARlevels_DOC.png", width=8, height=6)
 
+p_par_fitted_doc <- ggplot() + 
+  geom_point(data=PARdata,
+             aes(x=(DOC), y=(ss.1pc.estimate), 
+                 color=WaterBody), alpha=0.3, size=1.15 ) +
+  geom_line(data=PARdata_pred, 
+            aes(x=(DOC), y=PredSmooth,  
+                color=WaterBody,  group=WaterBody),
+            linewidth=0.75) +
+  facet_grid(Season ~ Lake) +
+  theme_bw() + 
+  theme(legend.position="bottom") +
+  #  scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
+  scale_color_manual(name="Habitat", values=our_colors[2:3]) +
+  #scale_x_continuous(breaks=seq(0,0.8, 0.2), limits=c(0,0.85) ) +
+  scale_y_continuous(breaks=seq(0, 60, 20), limits=c(0,65) ) +
+  labs(
+       y="1% PAR (400 - 700 nm) Depth (m)",
+       x="DOC (mg/L)") +
+  theme(legend.key.width = unit(1, 'cm'))
+
+
+p_log_par_fitted
+p_par_fitted
+p_par_fitted_doc
+
+ggsave(plot=p_par_fitted_doc,
+       filename="plots/pred_PARlevels_DOC.png", 
+       width=8, height=6, bg="white")
+
+p_par_fitted_doc <- p_par_fitted_doc +
+  labs(title="Predicted PAR Depth (m) as a function of DOC by habitat and season",
+       subtitle="Points correspond to observed data")
+
+save(PARdata, PARdata_pred, par.lmer,
+     p_log_par_fitted, p_par_fitted, p_par_fitted_doc,
+     file="fittedModelPAR.RData")

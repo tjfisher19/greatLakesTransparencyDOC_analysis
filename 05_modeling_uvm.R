@@ -53,8 +53,8 @@ uvm_back_bic <- lmerStepBackward(data=UVdata,
 #                                 fixed.formula = "log10(ss.1pc.estimate) ~ Lake * Year * Season * log10(DOC) * WaterBody*RiverPresent",
 #                                 random.formula = "(1 | SiteID)",
 #                                 criteria = "BIC")
-
-
+# 
+# 
 # save(uvm_back_aic, uvm_back_mdl, uvm_back_bic,
 #      uvm_forw_aic, uvm_forw_mdl, uvm_forw_bic,
 #      file="modelSelectionFits_uvm.RData")
@@ -75,7 +75,6 @@ uvm_back_bic <- lmerStepBackward(data=UVdata,
 
 ## Backward selection using BIC chosen model
 uvm_back_bic$BEST_FIXED_TERMS
-uvm_back_bic$BEST_AIC
 
 uvm.lmer <- lmer(log10(ss.1pc.estimate) ~  log10(DOC) +  Season + WaterBody + RiverPresent +
                    Season:WaterBody + log10(DOC):WaterBody + Season:RiverPresent +
@@ -137,23 +136,26 @@ emmeans(uvm.lmer, ~ log10(DOC) | WaterBody)
 
 min.doc <- min(UVdata$DOC)
 max.doc <- max(UVdata$DOC)
-UVdata_doc_range <- UVdata %>%
-  dplyr::select(Season, WaterBody, RiverPresent, BlagraveID) |>
-  mutate(DOC.min = min.doc,
-         DOC.max = max.doc) |>
-  pivot_longer(c(DOC.min, DOC.max), values_to="DOC" ) |>
-  dplyr::select(-name) |>
-  group_by(WaterBody, RiverPresent, Season, BlagraveID) %>%
-  complete(DOC = seq(min(DOC), max(DOC), 0.02) ) %>%
+UVdata_doc_range <- UVdata |>
+  group_by(Season, BlagraveID) |>
+  summarize(DOC.min = min(DOC),
+            DOC.max = max(DOC),
+            WaterBody = first(WaterBody),
+            RiverPresent = first(RiverPresent)) |>
+ # pivot_longer(c(DOC.min, DOC.max), values_to="DOC" ) |>
+  #dplyr::select(-name) |>
+  group_by(Season, BlagraveID, WaterBody, RiverPresent) |>
+  mutate(DOC = 0) |>
+  complete(DOC = seq(DOC.min, DOC.max, 0.02) ) |>
+  dplyr::filter(DOC > 0) |>
   ungroup() |>
-  distinct() |>
-  drop_na() |>
+  dplyr::select(Season, BlagraveID, WaterBody, RiverPresent, DOC) |>
   mutate(SiteID = -1)
 
 predict(uvm.lmer, as.data.frame(UVdata_doc_range),
         re.form=NA, se.fit=TRUE)
 
-UVdata_pred <- UVdata_doc_range %>%
+UVdata_pred <- UVdata_doc_range |>
   mutate(Pred = predict(uvm.lmer, newdata=as.data.frame(UVdata_doc_range), re.form=NA) ) %>%
   mutate(PredSmooth = 10^Pred) 
  
@@ -164,7 +166,30 @@ our_colors = c("#cd5a53",
                "#2eb5ce",
                "#2eb5ce")
 
-ggplot() + 
+p_log_uvm_fitted <- ggplot() + 
+  geom_point(data=UVdata,
+             aes(x=log10(DOC), y=log10(ss.1pc.estimate), 
+                 color=BlagraveID), alpha=0.3, size=1.15 ) +
+  geom_line(data=UVdata_pred, 
+            aes(x=log10(DOC), y=Pred,  
+                color=BlagraveID,  group=BlagraveID,
+                linewidth=BlagraveID, linetype=BlagraveID ) ) +
+  #facet_grid(Season ~ Lake) +
+  facet_grid(.~Season ) +
+  theme_bw() + 
+  theme(legend.position="bottom" ) +
+  scale_color_manual(name="Habitat", values=our_colors) +
+  scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
+  scale_linewidth_manual(values=c(0.75, 1, 0.75, 1), name="Habitat") +
+  scale_x_continuous(breaks=seq(0,0.8, 0.2), limits=c(0,0.85) ) +
+  #scale_y_continuous(breaks=seq(0, 12, 3), limits=c(0,12) ) +
+  labs(title="Predicted 1% UV Depth (m) as a function of DOC by habitat and season",
+       subtitle="Points correspond to observed data",       
+       y=expression("Logarithm of 1% UV Depth"~~~log[10](m)),
+       x=expression(log[10](DOC))) +
+  theme(legend.key.width = unit(1, 'cm'))
+
+p_uvm_fitted <- ggplot() + 
   geom_point(data=UVdata,
              aes(x=log10(DOC), y=(ss.1pc.estimate), 
                  color=BlagraveID), alpha=0.3, size=1.15 ) +
@@ -175,14 +200,53 @@ ggplot() +
   #facet_grid(Season ~ Lake) +
   facet_grid(.~Season ) +
   theme_bw() + 
-  theme(legend.position="bottom",
-        axis.title=element_blank() ) +
+  theme(legend.position="bottom" ) +
   scale_color_manual(name="Habitat", values=our_colors) +
   scale_linetype_manual(values = c("solid","11", "solid", "11"), name="Habitat" ) +
-  scale_linewidth_manual(values=c(0.65, 1, 0.65, 1), name="Habitat") +
+  scale_linewidth_manual(values=c(0.75, 1, 0.75, 1), name="Habitat") +
+  scale_x_continuous(breaks=seq(0,0.8, 0.2), limits=c(0,0.85) ) +
+  scale_y_continuous(breaks=seq(0, 12, 3), limits=c(0,12) ) +
   labs(title="Predicted 1% UV Depth (m) as a function of DOC by habitat and season",
-       subtitle="Points correspond to observed data") +
+       subtitle="Points correspond to observed data",       
+       y="1% UV Depth (m)",
+       x=expression(log[10](DOC))) +
   theme(legend.key.width = unit(1, 'cm'))
 
-ggsave(filename="plots/pred_UVlevels_DOC.png", width=8, height=2.95)
+p_uvm_fitted_doc <- ggplot() + 
+  geom_point(data=UVdata,
+             aes(x=(DOC), y=(ss.1pc.estimate), 
+                 color=BlagraveID, shape=BlagraveID), alpha=0.3, size=1.15 ) +
+  geom_line(data=UVdata_pred, 
+            aes(x=(DOC), y=PredSmooth,  
+                color=BlagraveID,  group=BlagraveID,
+                linewidth=BlagraveID, linetype=BlagraveID ) ) +
+  #facet_grid(Season ~ Lake) +
+  facet_grid(.~Season ) +
+  theme_bw() + 
+  theme(legend.position="bottom" ) +
+  scale_shape_manual(name="Habitat", values=c(16,17,16,17) ) +
+  scale_color_manual(name="Habitat", values=our_colors) +
+  scale_linetype_manual(values = rev(c("solid","11", "solid", "11")), name="Habitat" ) +
+  scale_linewidth_manual(values=rev(c(0.75, 1, 0.75, 1)), name="Habitat") +
+  #scale_x_continuous(breaks=seq(0,0.8, 0.2), limits=c(0,0.85) ) +
+  scale_y_continuous(breaks=seq(0, 12, 3), limits=c(0,12) ) +
+  labs(y="1% UV-B (320 nm) Depth (m)",
+       x="DOC (mg/L)") +
+  theme(legend.key.width = unit(1, 'cm'))
 
+p_log_uvm_fitted
+p_uvm_fitted
+p_uvm_fitted_doc
+
+## Figure for manuscript
+ggsave(plot=p_uvm_fitted_doc,
+       filename="plots/pred_UVlevels_DOC.png", 
+       width=8, height=2.95, bg="white")
+
+p_uvm_fitted_doc <- p_uvm_fitted_doc +
+  labs(title="Predicted 1% UV Depth (m) as a function of DOC by habitat and season",
+       subtitle="Points correspond to observed data")
+
+save(UVdata, UVdata_pred, uvm.lmer,
+     p_log_uvm_fitted, p_uvm_fitted, p_uvm_fitted_doc, 
+     file="fittedModelUV.RData")

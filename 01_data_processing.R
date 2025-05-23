@@ -145,15 +145,15 @@ getSeason <- function(input.date){
 full_light_data <- full_light_data |>
   mutate(Season = getSeason(Date),
          WaterBody = case_when(str_sub(BlagraveID, 1,1)=="E" ~ "Embayment",
-                               str_sub(BlagraveID, 1,1)=="O" ~ "Open Waters",
+                               str_sub(BlagraveID, 1,1)=="O" ~ "Non-embayment",
                                .default = NA),
          RiverPresent = case_when(str_sub(BlagraveID, 2,2)=="R" ~ "River",
-                                  str_sub(BlagraveID, 2,2)=="N" ~ "None",
+                                  str_sub(BlagraveID, 2,2)=="N" ~ "No River",
                                   .default= NA) ,
          Year = year(Date)-2001 ) |>
   mutate(Lake = factor(Lake, levels=c("Superior", "Huron", "Erie", "Ontario")),
          BlagraveID = factor(BlagraveID, levels=c("EN", "ER", "ON", "OR"),
-                             labels=c("Embayment,\nNo River", "Embayment,\nRiver Present", "Open Sea,\nNo River", "Open Sea,\nRiver Present")))
+                             labels=c("Embayment\nNo River", "Embayment\nRiver", "Non-embayment\nNo River", "Non-embayment\nRiver")))
 
 
 #####################################
